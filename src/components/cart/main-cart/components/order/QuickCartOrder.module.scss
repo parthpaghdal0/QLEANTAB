@@ -1,0 +1,25 @@
+@import "../../../../../assets/global-styles//mixins.scss";
+
+.quickCartMainWrapper {
+  width: 100%;
+}
+
+.quickCartOrderHeading {
+  background: var(--primary-duckegg-new);
+  width: 592px;
+  padding: 15px 0;
+  padding-left: 25px;
+  font-family: "JosefinSans-SemiBold";
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--primary-font);
+  margin-bottom: 15px;
+
+  @include medium-992-break {
+    width: 100%;
+  }
+  @include small-540-break {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../assets/global-styles/mixins.scss";
+.email_text_section {
+  text-align: center;
+  padding: 120px;
+  position: relative;
+
+  @include small-768-break {
+    padding: 65px 15px;
+  }
+
+  .drop_left,
+  .drop_right {
+    position: absolute;
+    top: 1.6vw;
+    @include small-540-break {
+      display: none;
+    }
+  }
+
+  .drop_left {
+    left: 0;
+  }
+  .drop_right {
+    right: 0;
+  }
+  .heading {
+    position: relative;
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 32px;
+    font-family: "JosefinSans-SemiBold";
+    z-index: 100;
+    @include small-540-break {
+      margin-bottom: 16px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  .description {
+    position: relative;
+    font-size: 42px;
+    line-height: 42px;
+    font-family: "JosefinSans-SemiBold";
+    color: white;
+    z-index: 100;
+    @include small-540-break {
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+  .description.color_green {
+    color: var(--main-green-hover);
+  }
+}

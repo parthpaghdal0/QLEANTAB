@@ -1,0 +1,76 @@
+@import "../../../assets/global-styles/mixins.scss";
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.inputWrapperName {
+  width: 184px;
+  @include small-768-break {
+    width: 100%;
+  }
+}
+
+.label {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.btnWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.formInput {
+  width: 100%;
+  padding: 30px;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  border: 1px solid var(--primary-duckegg);
+  border-radius: 100px;
+  font-family: "JosefinSans-Light";
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--primary-font);
+}
+
+.formInputAlt {
+  width: 100%;
+  padding: 30px;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  border: 1px solid rgba(65, 70, 75, 0.2);
+  border-radius: 16px;
+  font-family: "JosefinSans-Light";
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--primary-font);
+}
+
+.ivalidInput {
+  border-color: rgba(226, 118, 118, 1);
+}
+
+.errMsg {
+  font-family: "JosefinSans-Regular";
+  font-size: 16px;
+  line-height: 16px;
+  color: rgba(255, 29, 29, 1);
+  position: absolute;
+  top: 105%;
+  left: 0;
+  //   transform: translate(0, 0);
+}
+
+.showBtn {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}

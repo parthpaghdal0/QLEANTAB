@@ -1,0 +1,118 @@
+@import "../../assets/global-styles/mixins.scss";
+.image_text_double_section {
+  display: flex;
+  &.reverse_columns {
+    flex-direction: row-reverse;
+  }
+  .text_wrapper,
+  .image_wrapper {
+    flex-basis: 50%;
+  }
+  .text_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7vw 4.7vw 7vw 13.5vw;
+  }
+  .image_wrapper > div:first-of-type {
+    height: 100%;
+  }
+  &.reverse_columns .text_wrapper {
+    padding: 7vw 13.5vw 7vw 5vw;
+  }
+  .heading {
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 24px;
+    font-family: "JosefinSans-SemiBold";
+  }
+  .description {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.005em;
+    p {
+      margin-bottom: 16px;
+    }
+  }
+  &.custom_class .description p:nth-of-type(4),
+  &.custom_class .description p:nth-of-type(5) {
+    margin-bottom: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "JosefinSans-SemiBold";
+    em {
+      color: var(--main-green-hover);
+      font-style: normal;
+    }
+  }
+  .heading2 {
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--main-green-hover);
+    margin-top: 8px;
+  }
+  .text_wrapper strong {
+    color: var(--main-green-hover);
+    font-weight: 400;
+  }
+  .image_text_double_btn {
+    margin-top: 48px;
+    width: fit-content;
+    padding: 20px 51px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  ///// Mobile and Tablet Styles /////
+  @include large-1366-break {
+    .text_wrapper {
+      padding-left: 7vw;
+    }
+    &.reverse_columns .text_wrapper {
+      padding-right: 7vw;
+    }
+    .image_wrapper > div:first-of-type {
+      height: 100%;
+    }
+  }
+  @include small-768-break {
+    display: block;
+    .text_wrapper,
+    &.reverse_columns .text_wrapper {
+      padding: 64px 16px 24px 16px;
+    }
+    .image_text_double_btn {
+      padding: 17px 36px;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: "JosefinSans-SemiBold";
+      margin-top: 24px;
+    }
+  }
+  @include small-540-break {
+    .heading {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+    .description {
+      font-size: 14px;
+      line-height: 19px;
+      p {
+        margin-bottom: 8px;
+      }
+    }
+    &.custom_class .description p:nth-of-type(4),
+    &.custom_class .description p:nth-of-type(5) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    .heading2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-top: 8px;
+    }
+    .image_text_double_btn {
+      padding: 17px 36px 13px 36px;
+    }
+  }
+}

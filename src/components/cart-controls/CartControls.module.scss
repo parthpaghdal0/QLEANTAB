@@ -1,0 +1,446 @@
+@import "../../assets/global-styles//mixins.scss";
+
+.cartControlsWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 240px;
+  overflow-y: scroll;
+}
+
+.cartControlsWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.cartControlsWrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.productImage {
+  padding-left: 72px;
+  padding-bottom: 72px;
+}
+
+.singleCartProduct {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--primary-seafoam);
+  @include small-540-break {
+    position: relative;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+    gap: 16px;
+  }
+}
+
+.mobileLayoutWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  margin-bottom: 16px;
+
+  .productTitle {
+    text-align: left;
+    max-width: 200px;
+  }
+
+  .quantityControlMainCart {
+    order: 3;
+  }
+  @media (min-width: 540px) {
+    display: none;
+  }
+}
+
+.hideOnMobile {
+  @include small-540-break {
+    display: none;
+  }
+}
+
+.productTitle {
+  width: 130px;
+  font-family: "JosefinSans-SemiBold";
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--primary-font);
+}
+
+.price {
+  .priceWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90px;
+    @include small-540-break {
+      flex-direction: row-reverse;
+      gap: 6px;
+      width: auto;
+    }
+  }
+
+  .singleProductComparePrice {
+    font-family: "JosefinSans-Light";
+    font-size: 12px;
+    color: var(--primary-font);
+    text-decoration: line-through;
+    @include small-540-break {
+      line-height: 24px;
+    }
+  }
+
+  .singleProductTotalPrice {
+    text-align: left;
+    font-family: "JosefinSans-SemiBold";
+    font-size: 18px;
+    line-height: 18px;
+    color: var(--primary-font);
+    @include small-540-break {
+      text-align: left;
+    }
+  }
+}
+
+.singleItemPrice {
+  @include small-768-break {
+    display: none;
+  }
+}
+
+.deleteControlMainCart {
+  @include small-540-break {
+    z-index: 1000;
+    position: absolute;
+    left: 100%;
+    top: 11%;
+    transform: translate(-100%, -50%);
+  }
+}
+
+//SIDE-CART STYLE
+
+.sideCartControlsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 500px;
+  @media (max-height: 800px) {
+    height: 380px;
+  }
+  @media (max-height: 667px) {
+    height: 240px;
+  }
+  overflow-y: scroll;
+}
+
+.sideCartControlsWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.sideCartControlsWrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.singleSideCartProduct {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--primary-duckegg-new);
+}
+
+.sideCartImageContorllsFlexWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.sideCartContorlInnerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.sideCartproductTitle {
+  font-family: "JosefinSans-SemiBold";
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--primary-font);
+}
+
+.sideCartDelBtnWrapper {
+  height: 100%;
+}
+
+.priceSideCart {
+  .singleProductTotalPriceSideCart {
+    font-family: "JosefinSans-SemiBold";
+    font-size: 18px;
+    line-height: 18px;
+    color: var(--primary-font);
+    min-width: 55px;
+  }
+
+  .priceWrapperSideCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .singleProductComparePriceSideCart {
+    font-family: "JosefinSans-Light";
+    font-size: 12px;
+    line-height: 30px;
+    color: var(--primary-font);
+    text-decoration: line-through;
+  }
+}
+
+//PAGE CART CONTROLLS
+.ProductInfoWrapper {
+  width: 70%;
+  h2 {
+    padding-bottom: 20px;
+    padding-top: 36px;
+    font-family: "JosefinSans-SemiBold";
+    font-size: 42px;
+    line-height: 42px;
+    color: var(--primary-font);
+    @include small-540-break {
+      font-size: 36px;
+      line-height: 36px;
+      padding-bottom: 16px;
+      padding-top: 32px;
+    }
+  }
+  @include medium-1280-break {
+    width: 100%;
+  }
+
+  .productInfoBar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: var(--primary-seafoam);
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    font-family: "JosefinSans-Light";
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--primary-font);
+
+    .product {
+      width: 180px;
+    }
+
+    .type {
+      width: 208px;
+    }
+
+    .price {
+      width: 100px;
+    }
+
+    .quantity {
+      width: 106px;
+    }
+
+    .total {
+      width: 100px;
+    }
+
+    .delBtnSpace {
+      width: 20px;
+    }
+
+    @include small-768-break {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.pageCartControlsWrapper {
+  width: 100%;
+}
+
+//widths
+
+.PageCartImgTtitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 196px;
+
+  .titlePriceMobilePageCart {
+    .productTitle {
+      @include small-768-break {
+        height: 30px;
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+  }
+}
+
+.purchaseTypeWrapperSubscibe {
+  width: 208px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  background: #fff3e0;
+  padding: 5px 8px;
+  gap: 3px;
+  width: 208px;
+  .typeText {
+    display: flex;
+    gap: 12px;
+    p {
+      font-family: "JosefinSans-Light";
+      font-size: 12px;
+      line-height: 12px;
+      color: #41464b;
+      width: 90px;
+
+      span {
+        font-family: "JosefinSans-SemiBold";
+        font-size: 13px;
+        line-height: 13px;
+        color: var(--primary-font);
+      }
+    }
+  }
+}
+
+.purchaseTypeWrapperNoSubscibe {
+  width: 208px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  p {
+    text-align: center;
+    font-family: "JosefinSans-Light";
+    font-size: 12px;
+    line-height: 12px;
+    color: #41464b;
+    width: 90px;
+    padding: 4px 0;
+    width: 105px;
+    background: #fff3e0;
+    @include small-768-break {
+      text-align: left;
+      padding-left: 8px;
+    }
+  }
+}
+
+.purchaseTypeWrapperNoSubscibeMobile {
+  p {
+    width: 100%;
+  }
+}
+
+.pageCartPrice {
+  width: 100px;
+  .pageCartpriceWrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 3px;
+
+    .pageCartsingleProductTotalPrice {
+      font-family: "JosefinSans-SemiBold";
+      font-size: 18px;
+      line-height: 18px;
+      color: var(--primary-font);
+    }
+
+    .pageCartsingleProductComparePrice {
+      font-family: "JosefinSans-Light";
+      font-size: 12px;
+      line-height: 12px;
+      color: var(--primary-font);
+      text-decoration: line-through;
+    }
+
+    @include small-768-break {
+      flex-direction: row;
+      align-items: center;
+      gap: 6px;
+      width: 120px;
+    }
+  }
+}
+
+.pageCartSinglePriceHide {
+  @include medium-1280-break {
+    display: none;
+  }
+}
+
+.singlePageCartProduct {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid var(--primary-seafoam);
+  margin-bottom: 16px;
+  padding-top: 16px;
+  @include small-768-break {
+    padding-bottom: 16px;
+    padding-top: 0;
+  }
+}
+
+//mobile hell
+
+.pageCartMobileLyaoutOne {
+  @include small-768-break {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.pageCartMobileLyaoutTwo {
+  @include small-768-break {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 50px;
+  }
+}
+
+.titlePriceMobilePageCart {
+  @include small-768-break {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.showMobile768 {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.hideDesktop768 {
+  @include small-768-break {
+    display: none;
+  }
+}

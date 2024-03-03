@@ -1,0 +1,61 @@
+@import "../../../assets//global-styles/mixins.scss";
+
+.wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include small-768-break {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+.iconScrollWrapper {
+  @include small-540-break {
+    overflow-x: scroll;
+  }
+}
+
+.iconScrollWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.iconScrollWrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "JosefinSans-Bold";
+  font-size: 32px;
+  line-height: 32px;
+  color: var(--primary-font);
+  @include small-768-break {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @include small-540-break {
+    justify-content: flex-start;
+    width: 220vw;
+  }
+}
+
+.singleIconWrapper {
+  max-width: 240px;
+  @include small-768-break {
+    max-width: 80px;
+  }
+  @include small-540-break {
+    max-width: unset;
+    min-width: 170px;
+  }
+}

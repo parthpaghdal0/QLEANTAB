@@ -1,0 +1,7 @@
+@import "../../assets//global-styles//mixins.scss";
+.helper_class {
+  padding: 0 13.5vw;
+  @include small-768-break {
+    padding: 0;
+  }
+}

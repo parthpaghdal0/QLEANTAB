@@ -1,0 +1,46 @@
+@import "../../assets/global-styles/mixins.scss";
+.content_wrapper {
+  margin: 70px 0;
+  @include small-540-break {
+    margin: 40px 0;
+  }
+  h3 {
+    font-size: 28px;
+    line-height: 28px;
+    font-family: "JosefinSans-SemiBold";
+    margin-bottom: 24px;
+    margin-top: 24px;
+    color: #41464b;
+    @include small-540-break {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 16px;
+    }
+  }
+  p {
+    font-size: 18px;
+    line-height: 25px;
+    font-family: "JosefinSans-Light";
+    color: #41464b;
+    letter-spacing: 0.005em;
+    margin-bottom: 16px;
+    @include small-540-break {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 12px;
+    }
+  }
+  a {
+    font-size: 18px;
+    letter-spacing: 0.005em;
+    line-height: 25px;
+    font-family: "JosefinSans-Light";
+    color: #1e8a96;
+    text-decoration: underline;
+    @include small-540-break {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 12px;
+      }
+  }
+}

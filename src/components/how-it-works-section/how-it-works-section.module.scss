@@ -1,0 +1,79 @@
+@import "../../assets/global-styles/mixins.scss";
+.how_it_works_section {
+  background-color: var(--bg-05);
+  padding: 100px 13.5vw;
+  .heading,
+  .description {
+    text-align: center;
+  }
+  .heading {
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 24px;
+    font-family: "JosefinSans-SemiBold";
+
+    @include large-1536-break {
+      font-size: 22.4px;
+      line-height: 22.4px;
+    }
+  
+    @include large-1440-break {
+      font-size: 21px;
+      line-height: 21px;
+    }
+  
+    @include large-1366-break {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  .description {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.005em;
+
+    @include large-1536-break {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  
+    @include large-1440-break {
+      font-size: 13.5px;
+      line-height: 19px;
+    }
+  
+    @include large-1366-break {
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
+  .steps_wrapper,
+  .times_wrapper {
+    display: flex;
+  }
+  .steps_wrapper {
+    margin-top: 85px;
+  }
+  .times_wrapper {
+    margin-top: 75px;
+  }
+  @include small-540-break {
+    padding: 64px 16px 32px 16px;
+    .steps_wrapper {
+      display: block;
+      margin-top: 35px;
+    }
+    .times_wrapper {
+      margin-top: 35px;
+    }
+    .heading {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 16px;
+    }
+    .description {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}

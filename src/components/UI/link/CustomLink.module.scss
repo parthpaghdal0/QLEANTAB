@@ -1,0 +1,24 @@
+@import "../../../assets/global-styles/mixins.scss";
+
+.linkText {
+  a {
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--primary-font);
+    font-family: "JosefinSans-SemiBold";
+
+    @include small-768-break {
+      font-size: 14px;
+      line-height: 14px;
+    }
+    @media only screen and (max-width: 615px) {
+      font-size: 12px;
+      line-height: 12px;
+    }
+    @include small-540-break {
+      padding: 12px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+}

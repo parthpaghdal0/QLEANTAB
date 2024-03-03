@@ -1,0 +1,13 @@
+.addressWrapper {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+
+.addressWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.addressWrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

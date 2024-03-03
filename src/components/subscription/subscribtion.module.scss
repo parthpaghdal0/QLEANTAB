@@ -1,0 +1,138 @@
+@import "../../assets/global-styles/mixins.scss";
+
+.subscription {
+  margin: 10px 0;
+  display: flex;
+}
+
+.input_group {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 16px;
+  flex-basis: 50%;
+
+  label {
+    margin: 0 10px;
+  }
+}
+
+.subscribe_amount {
+  background-color: var(--secondary-peach);
+  border-radius: 1000px;
+  width: 48px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  font-family: "JosefinSans-SemiBold";
+}
+
+.input_radio {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-duckegg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input_radio_bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-duckegg);
+}
+
+.info_subscribtion {
+  margin: 35px 16px 0 0;
+}
+
+.info_subscribtion_heading {
+  font-family: "JosefinSans-SemiBold";
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 16px;
+}
+
+.subscribtion_info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.subscription_dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.subscribe_dropdown {
+  max-width: 444px;
+}
+
+.info_icon {
+  cursor: pointer;
+  position: relative;
+}
+
+.info_description {
+  position: absolute;
+  width: 230px;
+  height: 212px;
+  background-color: var(--primary-white);
+  box-shadow: 8px 4px 50px rgba(65, 70, 75, 0.11);
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 144.5%;
+  left: 24px;
+  bottom: 20px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: initial;
+  }
+}
+
+@include large-1600-break {
+  .info_description {
+    left: -950%;
+    z-index: 10;
+  }
+}
+
+// Mobile resolutions
+@include small-768-break {
+  .subscription {
+    order: 4;
+    align-items: flex-start;
+  }
+
+  .input_radio {
+    width: 14px;
+    height: 14px;
+    margin-bottom: 2px;
+  }
+
+  .info_subscribtion {
+    order: 5;
+  }
+
+  .input_group {
+    flex-wrap: wrap;
+    width: 50%;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .subscribe_amount {
+    margin: 5px 0 0 26px;
+  }
+}

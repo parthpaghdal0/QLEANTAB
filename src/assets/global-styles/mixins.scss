@@ -1,0 +1,81 @@
+//use it with::
+// @import '../../assets//mixins.scss';
+// @include smallScreenBreak {}
+// in scss file
+
+@mixin large-1920-break {
+  @media (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin large-1600-break {
+  @media (max-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin large-1600-break {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+@mixin large-1536-break {
+  @media (max-width: 1580px) {
+    // @media (max-width: 1536px) {
+    @content;
+  }
+}
+@mixin large-1440-break {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+@mixin large-1366-break {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+@mixin medium-1280-break {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+@mixin medium-1080-break {
+  @media (max-width: 1080px) {
+    @content;
+  }
+}
+@mixin medium-992-break {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin small-768-break {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin small-540-break {
+  @media (max-width: 540px) {
+    @content;
+  }
+}
+
+@mixin small-414-break {
+  @media (max-width: 414px) {
+    @content;
+  }
+}
+
+@mixin small-375-break {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin small-360-break {
+  @media (max-width: 360px) {
+    @content;
+  }
+}

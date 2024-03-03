@@ -1,0 +1,54 @@
+@import "../../../assets/global-styles//mixins.scss";
+
+.wrapper {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  z-index: 10000;
+  position: fixed;
+  background: white;
+  bottom: 10px;
+  left: 10px;
+  border: 1px solid var(--main-green-hover);
+  animation: slide-down 0.4s ease-out forwards;
+
+  @include small-540-break {
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 70px;
+    animation: slide-down-moile 0.4s ease-out forwards;
+  }
+}
+
+.btn {
+  padding: 16px 80px;
+  font-size: 16px;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    bottom: 210px;
+  }
+  to {
+    opacity: 1;
+    bottom: 10px;
+  }
+}
+
+@keyframes slide-down-moile {
+  from {
+    opacity: 0;
+    bottom: 270px;
+  }
+  to {
+    opacity: 1;
+    bottom: 70px;
+  }
+}

@@ -1,0 +1,93 @@
+@import "../../../../assets/global-styles/mixins.scss";
+
+.subWrapper {
+  padding: 12px;
+  margin-top: 16px;
+  background: rgba(231, 244, 239, 0.7);
+  border-radius: 8px;
+}
+
+.textBtnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 0.5px solid rgba(65, 70, 75, 0.2);
+}
+
+.subText {
+  font-family: "JosefinSans-Bold";
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--primary-font);
+  margin-bottom: 4px;
+}
+
+.dateText {
+  font-family: "JosefinSans-Regular";
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--primary-font);
+}
+
+.btn {
+  width: 120px;
+  padding-top: 16px;
+  padding-bottom: 13px;
+  font-family: "JosefinSans-SemiBold";
+  font-size: 16px;
+  border-radius: 1000px;
+}
+
+.divider {
+  padding-top: 16px;
+  border-bottom: 1px solid rgba(65, 70, 75, 0.2);
+}
+
+.bottomWrapper {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  p {
+    font-family: "JosefinSans-Bold";
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--primary-font);
+  }
+  @include small-768-break {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+}
+
+.statusWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  p {
+    font-family: "JosefinSans-Bold";
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--primary-font);
+  }
+}
+
+.statusBox {
+  border-radius: 43px;
+  padding: 8px 12px;
+  font-family: "JosefinSans-Bold";
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.active {
+  background: rgba(144, 255, 92, 0.8);
+  color: rgba(44, 138, 0, 1);
+}
+
+.cancaled {
+  background: rgba(255, 92, 92, 0.8);
+  color: rgba(138, 0, 0, 1);
+}

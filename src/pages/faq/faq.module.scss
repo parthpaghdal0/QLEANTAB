@@ -1,0 +1,93 @@
+@import "../../assets/global-styles/mixins.scss";
+
+.faqContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 64px 13.55% 0px 13.55%;
+  font-size: 28px;
+  line-height: 28px;
+  color: #41464b;
+  font-family: "JosefinSans-SemiBold";
+
+  @include large-1600-break {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  @include large-1440-break {
+    margin: 64px 11% 0px 11%;
+  }
+
+  @include medium-1280-break {
+    margin: 64px 7% 0px 7%;
+  }
+
+  @include medium-1080-break {
+    margin: 64px 0px 0px 16px;
+  }
+
+  @include small-768-break {
+    margin: 42px 0px 0px 16px;
+  }
+
+  @include small-540-break {
+    font-size: 21px;
+    line-height: 21px;
+  }
+
+  @include small-375-break {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .faqHeading {
+    font-size: 28px;
+    line-height: 28px;
+    color: #41464b;
+    margin-bottom: 46px;
+  }
+
+  .faqQuestions {
+    display: flex;
+    flex-direction: column;
+
+    .faqQuestion {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 2px solid #e7f4ef;
+      padding: 35px 0px;
+
+      &:last-of-type {
+        border-bottom: 2px solid #e7f4ef;
+      }
+
+      .iconContainer {
+        width: 36px;
+        height: 36px;
+        border: 2px solid #41464b;
+        border-radius: 1000px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(180deg);
+      }
+    }
+
+    .answerContainer {
+      padding: 16px 36px 16px 24px;
+      background-color: #e7f4ef;
+      margin: -22px 0px 22px 0px;
+
+      .answerText {
+        width: 96%;
+        font-size: 18px;
+        line-height: 140%;
+        letter-spacing: 0.005em;
+        color: #41464b;
+      }
+    }
+  }
+}

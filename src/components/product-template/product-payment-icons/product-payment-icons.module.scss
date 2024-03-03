@@ -1,0 +1,42 @@
+@import "../../../assets/global-styles/mixins.scss";
+
+.icons_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+
+  @include small-768-break {
+    margin-top: 40px;
+    justify-content: space-between;
+  }
+
+  svg {
+    margin-right: 21px;
+
+    @include small-768-break {
+      margin-right: 0;
+    }
+  }
+
+  @include small-768-break {
+    order: 9;
+    margin-top: 35px;
+  }
+}
+
+.icons_container_footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // gap: 26px;
+  gap: 14px;
+  @include small-768-break {
+    gap: 22px;
+  }
+  @include small-540-break {
+    gap: 0;
+    justify-content: space-between;
+  }
+}

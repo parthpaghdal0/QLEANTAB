@@ -1,0 +1,65 @@
+@import "../../assets/global-styles/mixins.scss";
+.simple_text_section {
+  // text-align: center;
+  padding: 6.7vw 26vw;
+  .heading p {
+    margin-bottom: 24px;
+    font-family: "JosefinSans-SemiBold";
+  }
+  .heading p:nth-of-type(1) { 
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .heading p:nth-of-type(2) {
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--main-green-hover);
+  }
+  .description p {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.005em;
+  }
+  .description p strong {
+    font-weight: 400;
+    color: var(--main-green-hover);
+    letter-spacing: 0.005em;
+  }
+
+  ///// Mobile and Tablet Styles /////
+  @media (max-width: 1800px) {
+    padding: 6.7vw 21vw;
+  }
+  @include large-1536-break {
+    padding: 6.7vw 21vw;
+  }
+  @include large-1366-break {
+    padding: 6.7vw 17.5vw;
+  }
+  @include medium-1080-break {
+    padding: 6.7vw 8vw;
+  }
+  @include small-768-break {
+    padding: 72px 16px;
+    text-align: left;
+  }
+  @include small-540-break {
+    .heading p {
+      margin-bottom: 16px;
+    }
+    .heading p:nth-of-type(1) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .heading p:nth-of-type(2) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    .description p {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}

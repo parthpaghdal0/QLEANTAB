@@ -1,0 +1,59 @@
+@import "../../../assets/global-styles/mixins.scss";
+
+.wrapper {
+  padding-top: 10px;
+  padding-bottom: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include medium-1080-break {
+    padding-top: 0;
+    padding-bottom: 26px;
+  }
+}
+
+.desktop {
+  @include small-768-break {
+    display: none;
+  }
+}
+
+.mobile {
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+.productWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 42px;
+  @include medium-1080-break {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.imgWrapper {
+  max-width: 620px;
+}
+
+.product_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
+  font-size: 32px;
+  line-height: 32px;
+  font-family: "JosefinSans-SemiBold";
+}
+
+.questionWrapper {
+  display: flex;
+  justify-content: center;
+}

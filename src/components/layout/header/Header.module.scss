@@ -1,0 +1,435 @@
+@import "../../../assets/global-styles/mixins.scss";
+
+.altPadding {
+  margin: 0 auto;
+  padding: 0 13.5vw;
+  @include large-1600-break {
+    padding: 0 8.5vw;
+  }
+
+  @include large-1440-break {
+    padding: 0 16px;
+  }
+}
+
+.headerContainer {
+  position: fixed;
+  z-index: 800;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 13px;
+  margin-bottom: 10px;
+  background: white;
+  box-shadow: 0px 4px 32px rgba(160, 210, 190, 0.15);
+  @include small-540-break {
+    padding: 0;
+    margin-bottom: 0;
+    margin: 0 -15;
+  }
+}
+
+.topLevelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 700;
+
+  @include small-540-break {
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0px 4px 32px rgba(160, 210, 190, 0.15);
+  }
+}
+
+.logoAndMobileContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  .mobileMenuBtn {
+    border: none;
+    @media (min-width: 541px) {
+      display: none;
+    }
+  }
+  .logoWrapper {
+    @include small-768-break {
+      display: none;
+    }
+  }
+
+  .logoWrapperMobile {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.headerTopLevelBtnWrapper {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  @include small-768-break {
+    gap: 6px;
+  }
+
+  .moblieLangDropdown {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.desktopLangDropdown {
+  @include small-768-break {
+    display: none;
+  }
+}
+
+.infoBoxWrapper {
+  cursor: pointer;
+  width: 224px;
+  height: 48px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 8px;
+  background-color: var(--primary-seafoam);
+  p {
+    font-size: 14px;
+    line-height: 16px;
+    font-family: "JosefinSans-Regular";
+    border-radius: 8px;
+  }
+  @include small-768-break {
+    display: none;
+  }
+}
+
+.contactPhoneWrapper {
+  p:nth-child(1) {
+    font-size: 16px;
+    font-family: "JosefinSans-Light";
+    color: var(--primary-font);
+    margin-bottom: 10px;
+  }
+  p:nth-child(2) {
+    font-size: 24px;
+    font-family: "JosefinSans-SemiBold";
+    color: var(--primary-font);
+  }
+  @include small-768-break {
+    display: none;
+  }
+}
+
+.shopNowBtn {
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  background: var(--primary-duckegg);
+  color: white;
+  border: none;
+  border-radius: 1000px;
+  padding: 0 48px;
+  padding-top: 18px;
+  padding-bottom: 12px;
+  box-shadow: 0px 4px 16px rgba(160, 210, 190, 0.47);
+  @include small-768-break {
+    display: none;
+  }
+}
+
+.accMobileBtn {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  background: var(--primary-duckegg);
+  color: white;
+  border: none;
+  border-radius: 1000px;
+  padding: 0 48px;
+  padding-top: 18px;
+  padding-bottom: 12px;
+  box-shadow: 0px 4px 16px rgba(160, 210, 190, 0.47);
+  margin-bottom: 30px;
+}
+
+.cartBtn,
+.wishBtn,
+.userBtn {
+  border: none;
+  @include medium-1080-break {
+    margin-right: 25px;
+  }
+}
+
+.cartBtnInnerWrapper,
+.wishBtnInnerWrapper,
+.userBtnInnerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .cartTitle {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: "JosefinSans-Regular";
+    color: var(--primary-font);
+    @include small-768-break {
+      display: none;
+    }
+  }
+}
+.cartBtnInnerWrapper {
+  @include small-540-break {
+    svg {
+      width: 24px;
+    }
+  }
+}
+.productCount {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 1000px;
+  background: var(--primary-duckegg);
+  @include small-540-break {
+    width: 22px;
+    height: 22px;
+  }
+  .productCountText {
+    font-size: 14px;
+    line-height: 14px;
+    font-family: "JosefinSans-Regular";
+    color: white;
+    margin-bottom: -2px;
+    @include small-540-break {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+}
+
+// BOTTOM LEVEL HEADER
+
+.bottomLevelHeader {
+  margin-top: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include medium-992-break {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  @include small-540-break {
+    margin-top: 0;
+    justify-content: space-between;
+    background: white;
+    // position: absolute;
+    position: fixed;
+    width: 100%;
+    // height: calc(100vh - 60px);
+    // top: 100%;
+    top: 66px;
+    height: calc(100% - 66px);
+    left: -50%;
+    transform: translate(-50%, 0);
+    padding-bottom: 25px;
+    z-index: -1;
+  }
+}
+
+.mainNavList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  @include medium-1080-break {
+    gap: 24px;
+  }
+  @include small-768-break {
+    gap: 12px;
+  }
+  @include small-540-break {
+    padding: 0 15px;
+    padding-top: 13px;
+    flex-direction: column;
+    width: 100%;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      border-bottom: 1px solid var(--primary-seafoam);
+      padding-bottom: 12px;
+    }
+    li:last-child {
+      border: none;
+    }
+  }
+}
+.mainNavLink a {
+  @include small-540-break {
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "JosefinSans-Medium";
+  }
+}
+.selectedMainNavLink a {
+  color: var(--main-green-hover);
+}
+
+.headerBottomLevelBtnWrapper {
+  display: flex;
+  @include small-540-break {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.helpBtn {
+  padding-right: 25px;
+  border: none;
+  border-right: 1px solid var(--primary-duckegg);
+  //FOR HIDING CUR DROPDOWN
+  padding-left: 25px;
+  border-left: 1px solid var(--primary-duckegg);
+}
+.currencyBtn {
+  border: none;
+  padding-left: 25px;
+}
+
+.helpBtnInnerWrapper,
+.currencyInnerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  p {
+    font-size: 16px;
+    line-height: 16px;
+    font-family: "JosefinSans-Regular";
+    color: var(--primary-font);
+  }
+
+  .currencySymbol {
+    position: relative;
+
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--main-green-hover);
+    .currencySymbolText {
+      position: absolute;
+      left: 50%;
+      top: 60%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-family: "JosefinSans-SemiBold";
+    }
+  }
+}
+
+.triangleDown {
+  position: relative;
+  top: -5px;
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  transform: rotate(135deg);
+}
+
+@keyframes slidein {
+  0% {
+    left: -50%;
+  }
+
+  50% {
+    left: 0;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+
+.slideIn {
+  @include small-540-break {
+    animation: slidein 0.2s linear;
+    left: 50%;
+  }
+}
+
+@keyframes slideout {
+  0% {
+    left: 50%;
+  }
+
+  50% {
+    left: 0;
+  }
+
+  100% {
+    left: -50%;
+  }
+}
+
+.slideOut {
+  @include small-540-break {
+    animation: slideout 0.2s linear;
+    left: -50%;
+  }
+}
+
+// Hide FAQ link on desktop and show it on mobile
+.hideOnDesktop {
+  display: none;
+  @include small-540-break {
+    display: flex;
+  }
+}
+
+.logOutWrapper {
+  display: none;
+  @include small-540-break {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.logOutBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  div {
+    position: relative;
+    top: 2px;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "JosefinSans-Medium";
+    color: var(--primary-font);
+  }
+}

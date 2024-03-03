@@ -1,0 +1,335 @@
+@import "../../../assets/global-styles/mixins.scss";
+.insideTabMainWrapper {
+  display: flex;
+  height: 49.5vw;
+  width: 100%;
+  @include medium-1080-break {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 164.5vw;
+    height: unset; 
+  }
+
+  @include small-768-break {
+    min-height: 162.5vw;
+  }
+
+  @include small-540-break {
+    min-height: 160.5vw;
+  }
+
+  @include small-540-break {
+    min-height: 158.5vw;
+  }
+  @include small-414-break { 
+    min-height: 205vw;
+  }
+  @include small-375-break {
+    min-height: 210vw;
+  }
+  strong {
+    font-weight: 400;
+    color: var(--main-green-hover);
+  }
+}
+
+.textSection {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5vw;
+  padding-left: 13.5vw;
+  background: var(--primary-seafoam);
+  @include large-1366-break {
+    padding: 0 16px;
+    justify-content: center;
+  }
+
+  @include medium-1080-break {
+    height: 49%;
+    width: 100%;
+  }
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @include medium-1080-break {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .heading {
+    font-size: 28px;
+    line-height: 28px;
+    font-family: "JosefinSans-SemiBold";
+    color: var(--primary-state);
+    padding-bottom: 8px;
+    @include large-1366-break {
+      font-size: 24px;
+      line-height: 24px;
+    }
+    @include medium-1080-break {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    @include small-768-break {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .pargraph {
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--primary-state);
+    letter-spacing: 0.005em;
+    p {
+      display: inline;
+    }
+    strong {
+      color: var(--main-green-hover);
+      font-weight: 400;
+    }
+    @include large-1366-break {
+      font-size: 15px;
+      line-height: 15px;
+    }
+    @include medium-1080-break {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    @include small-768-break {
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    @include small-540-break {
+      display: none;
+    }
+  }
+
+  .pargraphMobile {
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.005em;
+    display: none;
+    @include small-540-break {
+      margin-bottom: 8px;
+      display: block;
+      p {
+        display: inline;
+      }
+    }
+  }
+
+  @include small-540-break {
+    gap: 5px;
+  }
+}
+
+.imgSection {
+  height: 100%;
+  width: 50%;
+  position: relative;
+  @include medium-1080-break {
+    height: 51%;
+    width: 100%;
+  }
+}
+.decoration_wrapper {
+  width: 35vw;
+  margin: 0 auto;
+  @include medium-1080-break {
+    width: 70vw;
+  }
+  @include small-540-break {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: -10vw;
+    margin-top: -2vw;
+  }
+  @include small-414-break {
+    width: 90vw;
+    margin-top: 0;
+    margin-right: -15vw;
+  }
+}
+.icon_text {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  @include small-540-break {
+    display: none;
+  }
+}
+
+.number {
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid var(--primary-duckegg);
+  box-shadow: 13px 9px 20px rgba(110, 191, 155, 0.09);
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.005em;
+  @include large-1536-break {
+    min-width: 34px;
+    min-height: 34px;
+  }
+}
+.text1 {
+  top: 48%;
+  right: 65%;
+}
+.text2 {
+  top: 69%;
+  right: 61%;
+}
+.text3 {
+  top: 48%;
+  left: 64%;
+}
+.text4 {
+  top: 69%;
+  left: 60%;
+}
+.text {
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid var(--primary-duckegg);
+  box-shadow: 13px 9px 20px rgba(110, 191, 155, 0.09);
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 22px;
+  margin-left: 24px;
+  letter-spacing: 0.005em;
+  @include large-1536-break {
+    margin-left: 16px;
+    padding: 14px;
+  }
+}
+.text1,
+.text2 {
+  flex-direction: row-reverse;
+  & .text {
+    margin-right: 24px;
+    margin-left: unset;
+    @include large-1536-break {
+      margin-right: 16px;
+    }
+  }
+}
+.icon_text_mobile {
+  display: none;
+  @include small-540-break {
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: 28px;
+  }
+}
+.single_number {
+  display: none;
+  @include small-540-break {
+    display: block;
+  }
+}
+.block_mobile {
+  display: flex;
+  background-color: #ffffff;
+  border: 1px solid var(--primary-duckegg);
+  box-shadow: 13px 9px 20px rgba(110, 191, 155, 0.09);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 8px;
+  width: fit-content;
+}
+.block_mobile span {
+  margin-right: 5px;
+}
+
+.number_mobile {
+  font-size: 12px;
+  line-height: 16px;
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 100%;
+  background: #ffffff;
+  border: 1px solid var(--primary-duckegg-new);
+  box-shadow: 13px 9px 20px rgba(110, 191, 155, 0.09);
+  position: absolute;
+  display: none;
+  @include small-540-break {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.number1 {
+  top: 55%;
+
+  @include small-540-break {
+    right: 47%;
+    top: 62%;
+  }
+  @include small-414-break {
+    right: 49%;
+    top: 56%;
+  }
+}
+.number2 {
+  top: 75%;
+
+  @include small-540-break {
+    right: 47%;
+    top: 84%;
+  }
+  @include small-414-break {
+    top: 76%;
+    right: 49%;
+  }
+  @include small-375-break {
+    top: 78%;
+  }
+}
+.number3 {
+  top: 55%;
+
+  @include small-540-break {
+    left: 85%;
+    top: 62%;
+  }
+  @include small-414-break {
+    left: 88%;
+    top: 56%;
+  }
+}
+.number4 {
+  top: 75%;
+
+  @include small-540-break {
+    left: 83%;
+    top: 84%;
+  }
+  @include small-414-break {
+    left: 85%;
+    top: 76%;
+  }
+  @include small-375-break {
+    left: 85%;
+    top: 78%;
+  }
+}

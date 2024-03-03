@@ -1,0 +1,114 @@
+@import "../../assets/global-styles/mixins.scss";
+.icons_section {
+  background-color: var(--primary-duckegg);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  padding: 37px 13.5vw;
+
+  @include large-1536-break {
+    padding: 29.35px 13.5vw;
+  }
+
+  @include large-1440-break {
+    padding: 28.5px 13.5vw;
+  }
+
+  @include large-1366-break {
+    padding: 26.75px 13.5vw;
+  }
+  .icon_block {
+    display: flex;
+    align-items: center;
+
+    .icon_image {
+      @include large-1536-break {
+        max-width: 33.6px;
+      }
+
+      @include large-1440-break {
+        max-width: 30px;
+      }
+
+      @include large-1366-break {
+        max-width: 29px;
+      }
+    }
+  }
+  .icon_text {
+    font-family: JosefinSans-Medium;
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: 16px;
+
+    @include large-1536-break {
+      font-size: 14.4px;
+      line-height: 20.88px;
+      margin-left: 13.86px;
+    }
+
+    @include large-1440-break {
+      font-size: 13.5px;
+      line-height: 19.57px;
+      margin-left: 13px;
+    }
+
+    @include large-1366-break {
+      font-size: 12.8px;
+      line-height: 18.57px;
+      margin-left: 11px;
+    }
+    p {
+      display: inline;
+    }
+  }
+  ///// Mobile and Tablet Styles /////
+  @include medium-1280-break {
+    justify-content: space-between;
+    .icon_block {
+      padding: 0 15px;
+    }
+  }
+  @include medium-992-break {
+    .icon_text {
+      font-size: 16px;
+    }
+    .icon_block {
+      padding: 0 10px;
+    }
+  }
+  @include small-768-break {
+    .icon_text {
+      font-size: 14px;
+    }
+  }   
+  @include small-540-break {
+    padding: 37px 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 7px;
+    .icon_block {
+      flex-basis: 50%;
+      display: block;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 0; 
+    }
+    .icon_text {
+      margin-left: 0;
+    }
+    .icon_text p {
+      display: block;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    .icon_text p strong {
+      display: none;
+    }
+    .icon_block .icon_image {
+      margin: 0 auto 15px auto;
+      max-width: 42px;
+    }
+  }
+}

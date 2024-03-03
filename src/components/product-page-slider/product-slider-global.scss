@@ -1,0 +1,53 @@
+@import "../../assets/global-styles//mixins.scss";
+
+.custom-classes-prduct-slider {
+  .slick-slide {
+    opacity: 0.5 !important;
+    cursor: pointer;
+    padding-bottom: 5px;
+    transition: ease-in-out 0.3s;
+    width: 80px !important;
+    @include small-540-break {
+      width: 69px !important;
+      padding-bottom: 0;
+    }
+  }
+
+  .slick-slide:hover {
+    opacity: 1 !important;
+  }
+
+  .slick-center {
+    opacity: 1 !important;
+  }
+
+  .slick-slide img {
+    height: 70px;
+    width: 70px;
+    @include small-768-break {
+      height: 55px;
+      width: 55px;
+    }
+    @include small-540-break {
+      height: 69px;
+      width: 69px;
+    }
+  }
+
+  .slick-list {
+    @include small-540-break {
+      width: 90px;
+    }
+  }
+
+  .slick-track {
+    @include small-540-break {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 10px;
+      margin: 0 !important;
+    }
+  }
+}

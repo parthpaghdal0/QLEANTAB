@@ -1,0 +1,71 @@
+@import "../../assets/global-styles/mixins.scss";
+.instagram_section {
+  background-color: var(--primary-seafoam);
+  padding-top: 82px;
+  padding-bottom: 164px;
+  text-align: center;
+  position: relative;
+  .heading {
+    margin-bottom: 48px;
+    font-size: 28px;
+    line-height: 28px;
+    font-family: "JosefinSans-SemiBold";
+    color: var(--primary-state);
+  }
+  .heading strong {
+    font-family: "JosefinSans-SemiBold";
+    color: var(--main-green-hover);
+  }
+  .decoration {
+    position: absolute;
+    left: 0;
+    bottom: 26px;
+  }
+  .decoration svg {
+    width: 20.6vw;
+    height: 20.6vw;
+  }
+  .slider_dots {
+    display: none;
+  }
+  @include medium-1080-break {
+    padding-top: 64px;
+    padding-bottom: 128px;
+    .decoration {
+      display: none;
+    }
+    .heading {
+      margin-bottom: 24px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  @include small-540-break {
+    .slick-track > div:first-of-type.slick-slide.slick-active {
+      margin-left: -50px;
+    }
+    .slider_dots {
+      display: flex;
+      margin-top: 48px;
+      justify-content: center;
+    }
+    .prev_dot,
+    .next_dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+      background-color: #ffffff;
+      margin: 0 5px;
+    }
+    .selected_dot {
+      background-color: var(--primary-duckegg);
+    }
+  }
+  &.custom_styles{
+    background-color: #ffffff;
+    .decoration{
+      display: none;
+    }
+  }
+}

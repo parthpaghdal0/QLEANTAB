@@ -1,0 +1,67 @@
+@import "../../../../assets/global-styles/mixins.scss";
+
+.questionWrapper {
+  position: relative;
+  width: 660px;
+  padding: 21px 24px;
+  padding-left: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-white);
+  border-radius: 1000px;
+  @include small-768-break {
+    padding: 24px;
+    flex-direction: column;
+    gap: 60px;
+    border-radius: 50px;
+  }
+}
+.iconTextWrapper {
+  //   position: relative;
+  //   display: flex;
+  //   align-items: center;
+}
+.iconWrapper {
+  position: absolute;
+  max-width: 120px;
+  left: 10%;
+  top: 55%;
+  transform: translate(-50%, -80%);
+  @include small-768-break {
+    left: 32%;
+    top: 28%;
+    transform: translate(-50%, -80%);
+  }
+}
+
+.text {
+  font-family: "JosefinSans-Bold";
+  color: var(--primary-font);
+  font-size: 26px;
+  line-height: 26px;
+  @include small-768-break {
+    width: 100%;
+    padding-left: 116px;
+    padding-top: 16px;
+  }
+}
+
+.questionBtn {
+  padding: 22px 30px 16px 30px;
+  border-radius: 1000px;
+  background: black;
+  font-family: "JosefinSans-Bold";
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--primary-white);
+  @include small-768-break {
+    font-size: 14px;
+  }
+}
+
+@media (hover: hover) {
+  .questionBtn:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,186 @@
+@import "../../../../../assets/global-styles/mixins.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  background: var(--primary-white);
+  border: 1px solid rgba(84, 131, 112, 0.2);
+  box-shadow: 0px 12px 50px rgba(65, 70, 75, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.image {
+  width: 600px;
+  background: rgba(231, 244, 239, 1);
+  @include medium-1280-break {
+    display: none;
+  }
+}
+
+.formWrapper {
+  position: relative;
+  width: 600px;
+  padding: 101px 98px;
+  background: var(--primary-white);
+  @include small-768-break {
+    width: 100%;
+    padding: 32px 16px;
+  }
+}
+
+.loaderWrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  .logo {
+    max-width: 222px;
+  }
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 32px;
+  font-family: "JosefinSans-Bold";
+  font-size: 42px;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+.checkBoxAndBtnWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkboxWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.checkBoxPosition {
+  position: relative;
+  top: 4px;
+}
+
+.forgotPaswwordBtn {
+  min-width: 110px;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "JosefinSans-SemiBold";
+  text-decoration: underline;
+  color: var(--dark-green);
+}
+
+.btnWrapper {
+  width: 100%;
+}
+.submitBtn {
+  width: 100%;
+  padding-top: 23px;
+  padding-bottom: 17px;
+  font-size: 20px;
+}
+
+.checkboxText {
+  padding-bottom: 1px;
+  width: fit-content;
+  @include small-768-break {
+    width: 100%;
+  }
+  p {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "JosefinSans-SemiBold";
+    @include small-768-break {
+      display: inline;
+    }
+    a {
+      text-decoration: underline;
+      color: var(--dark-green);
+    }
+  }
+}
+
+.invalidCheckboxText {
+  position: relative;
+}
+
+.invalidCheckboxText::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #e27676;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.btnWrapper {
+  position: relative;
+  padding-bottom: 16px;
+  // border-bottom: 1px solid red;
+}
+
+.btnWrapper::after {
+  content: "";
+  width: 85%;
+  height: 1px;
+  background: #a0d2be;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.navigateAway {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  p {
+    font-size: 18px;
+    font-family: "JosefinSans-SemiBold";
+  }
+}
+
+.navigateBtn {
+  font-size: 18px;
+  font-family: "JosefinSans-SemiBold";
+  text-decoration: underline;
+  color: var(--dark-green);
+}
+
+.recoveryBtnWrapper {
+  width: 100%;
+  text-align: right;
+}

@@ -1,0 +1,95 @@
+@import "../../../../../../../assets/global-styles/mixins.scss";
+.tab2 {
+  padding: 36px 32px;
+  background-color: white;
+  min-width: 1000px;
+
+  .heading {
+    font-size: 32px;
+    line-height: 46px;
+    margin-bottom: 36px;
+    font-family: "JosefinSans-SemiBold";
+  }
+  .internal_tabs_wrapper {
+    display: flex;
+    border-bottom: 3px solid #e7f4ef;
+    margin-bottom: 36px;
+  }
+  .internal_tab {
+    font-size: 42px;
+    line-height: 42px;
+    font-family: "JosefinSans-SemiBold";
+    color: var(--secondary-gray);
+    margin-right: 50px;
+    cursor: pointer;
+    padding-bottom: 8px;
+  }
+  .internal_tab.selected {
+    border-bottom: 6px solid var(--main-green-hover);
+    margin-bottom: -3px;
+    color: #41464b;
+  }
+
+  ///// Mobile and Tablet Styles /////
+  @include large-1600-break {
+    .internal_tab {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
+  @include medium-1280-break {
+    .heading {
+      font-size: 28px;
+      line-height: 28px;
+    }
+    .internal_tab {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+  @include medium-1080-break {
+    min-width: 90vw;
+  }
+  @include small-768-break {
+    min-width: calc(100vw - 16px);
+    .heading {
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 0;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--main-green-hover);
+    }
+    .internal_tabs_wrapper {
+      border-bottom: 1px solid #e7f4ef;
+    }
+    .internal_tab {
+      font-size: 18px;
+      line-height: 18px;
+    }
+    .internal_tab.selected {
+      border-bottom: 3px solid var(--main-green-hover);
+      margin-bottom: -1px;
+    }
+  }
+  .close {
+    display: none;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--main-green-hover);
+    background-color: transparent;
+    padding: 25px 15px 19px;
+    border: 1px solid var(--main-green-hover);
+    border-radius: 1000px;
+    width: 100%;
+    box-shadow: unset;
+    margin: 0 auto;
+    margin-top: 30px;
+    @include small-540-break {
+      display: block;
+    }
+  }
+  //added for landing pages
+  @include small-540-break {
+    padding: 16px 16px;
+  }
+}

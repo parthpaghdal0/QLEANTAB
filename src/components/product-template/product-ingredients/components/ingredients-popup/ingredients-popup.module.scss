@@ -1,0 +1,55 @@
+@import "../../../../../assets/global-styles/mixins.scss";
+.popup_overlay {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: fixed;
+  left: 0;
+  top: 0px;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  background: rgba(65, 70, 75, 0.36);
+  backdrop-filter: blur(4px);
+  .popup_wrapper {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .close_btn {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "JosefinSans-SemiBold";
+    color: var(--secondary-gray);
+    display: flex;
+    align-items: flex-end;
+  }
+  .close_btn span {
+    margin-left: 14px;
+  }
+  ///// Mobile and Tablet Styles /////
+  @include small-768-break {
+    .popup_wrapper {
+      top: 80px;
+    }
+    .close_btn {
+      top: 10px;
+      right: 10px;
+    }
+    .close_btn span {
+      display: none;
+    }
+    .close_btn svg {
+      margin-right: 0;
+    }
+  }
+}
+
+.popup_overlay::-webkit-scrollbar {
+  display: none;
+}

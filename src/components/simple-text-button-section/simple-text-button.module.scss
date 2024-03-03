@@ -1,0 +1,96 @@
+@import "../../assets/global-styles/mixins.scss";
+.simple_text_button_section {
+  padding: 6.7vw 30vw 10.1vw 30vw;
+  text-align: center;
+  @include large-1600-break {
+    padding-left: 27vw;
+    padding-right: 27vw;
+  }
+  @include large-1536-break {
+    padding-left: 25vw;
+    padding-right: 25vw;
+  }
+  @include large-1440-break {
+    padding-left: 23vw;
+    padding-right: 23vw;
+  }
+  @include medium-1280-break {
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
+  @include medium-1080-break {
+    padding-left: 16vw;
+    padding-right: 16vw;
+  }
+
+  .heading {
+    font-size: 28px;
+    line-height: 28px;
+    font-family: "JosefinSans-SemiBold";
+    margin-bottom: 24px;
+  }
+  .description {
+    padding: 0 53px;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.005em;
+    margin-bottom: 48px;
+  }
+  .section_button {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 23px 117px 17px 117px;
+  }
+  &.custom_styles {
+    padding: 6.7vw 13.5vw 10.1vw 13.5vw;
+  }
+  &.custom_styles .section_button {
+    padding-left: 51px;
+    padding-right: 51px;
+  }
+  .description p {
+    margin-bottom: 16px;
+  }
+}
+
+//affiliates
+
+.simple_text_button_section_affiliatesAndContact {
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .heading {
+    @include small-540-break {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .description {
+    text-align: center;
+    max-width: 600px;
+    @include small-768-break {
+      padding: 0;
+    }
+
+    @include small-540-break {
+      margin-bottom: 24px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  .section_button {
+    @include small-540-break {
+      padding: 17px 36px 13px 36px;
+    }
+  }
+  @include small-540-break {
+    padding-top: 90px;
+    padding-bottom: 72px;
+  }
+}

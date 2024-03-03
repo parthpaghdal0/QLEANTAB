@@ -1,0 +1,32 @@
+@import "../../../../assets/global-styles/mixins.scss";
+
+.detailSection {
+  width: 100%;
+  padding: 32px;
+  box-shadow: 0px 12px 50px rgba(65, 70, 75, 0.15);
+  border-radius: 16px;
+  background: var(--primary-white);
+  height: fit-content;
+  margin: 50px 0;
+  position: relative;
+  overflow: hidden;
+  @include small-768-break {
+    padding: 0;
+    background: unset;
+    box-shadow: unset;
+    margin: 16px 0;
+  }
+}
+
+.heading {
+  font-size: 36px;
+  line-height: 36px;
+  font-family: "JosefinSans-Bold";
+}
+
+.subHeading {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "JosefinSans-Bold";
+  margin-top: 16px;
+}

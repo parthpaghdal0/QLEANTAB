@@ -1,0 +1,121 @@
+@import "../../../../../../../assets/global-styles/mixins.scss";
+.tab1 {
+  padding: 36px 32px;
+  display: flex;
+  align-items: center;
+  min-width: 1000px; //53vw
+  &.columns_reverse {
+    flex-direction: row-reverse;
+  }
+  .text_wrapper {
+    flex-basis: 60%;
+  }
+  .image_wrapper {
+    flex-basis: 40%;
+  }
+  .heading {
+    font-size: 32px;
+    line-height: 46px;
+    margin-bottom: 36px;
+    font-family: "JosefinSans-SemiBold";
+  }
+  .description {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.005em;
+  }
+  .text_wrapper .description ul {
+    list-style: none;
+    li::before {
+      content: "•";
+      color: var(--main-green-hover);
+      font-size: 25px;
+      margin-right: 10px;
+    }
+  }
+  .text_wrapper .description li {
+    margin-bottom: 10px;
+  }
+  .icons_wrapper {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .icon {
+    padding: 0 3.5vw;
+  }
+  .icon_wrapper,
+  .icon_text {
+    text-align: center;
+  }
+  .icon_wrapper {
+    margin-bottom: 25px;
+  }
+  .icon_text {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.005em;
+  }
+  .close {
+    display: none;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--main-green-hover);
+    background-color: transparent;
+    padding: 25px 15px 19px;
+    border: 1px solid var(--main-green-hover);
+    border-radius: 1000px;
+    width: 100%;
+    box-shadow: unset;
+    margin-top: 30px;
+  }
+
+  ///// Mobile and Tablet Styles /////
+  @include medium-1080-break {
+    min-width: 90vw;
+  }
+  @include small-768-break {
+    display: block;
+    min-width: calc(100vw - 32px);
+    padding: 24px 16px;
+    .close {
+      display: block;
+    }
+    .heading {
+      font-size: 20px;
+      line-height: 16px;
+      margin-bottom: 16px;
+    }
+    .description {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 7px;
+    }
+    .icons_wrapper {
+      justify-content: center;
+    }
+    .icon_text {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    .icon_wrapper {
+      width: 72px;
+      margin: 0 auto 15px;
+    }
+    .image_wrapper {
+      margin-top: 50px;
+    }
+  }
+  @include small-414-break{
+    .icons_wrapper{
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .icon{
+      flex-basis: 48%;
+      padding: 0;
+    }
+  }
+}

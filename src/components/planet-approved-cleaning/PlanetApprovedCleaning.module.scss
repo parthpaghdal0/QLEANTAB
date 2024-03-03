@@ -1,0 +1,261 @@
+@import "../../assets/global-styles/mixins.scss";
+
+.mainContainer {
+  padding: 194px 0px 190px 0px;
+
+  @include small-768-break {
+    padding: 72px 0px 43px 0px;
+  }
+
+  .textContainer {
+    color: #41464b;
+
+    .title {
+      font-family: "JosefinSans-SemiBold";
+      font-weight: 600;
+      font-style: normal;
+      font-size: 28px;
+      line-height: 28px;
+      text-align: center;
+      margin-bottom: 24px;
+      color: var(--primary-state);
+
+      @include small-768-break {
+        width: 49%;
+        margin: 0px auto 24px auto;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      @include small-540-break {
+        margin: 0px auto 16px auto;
+        width: 60%;
+        line-height: 20px;
+      }
+
+      @include small-414-break {
+        width: 92%;
+      }
+    }
+
+    .description {
+      width: 32%;
+      font-style: normal;
+      font-size: 18px;
+      color: var(--primary-state);
+      line-height: 140%;
+      text-align: center;
+      letter-spacing: 0.005em;
+      margin: 0px auto 50px auto;
+      letter-spacing: 0.005em;
+
+      @include large-1600-break {
+        width: 38%;
+      }
+
+      @include large-1366-break {
+        width: 45%;
+      }
+
+      @include medium-1280-break {
+        width: 48%;
+      }
+
+      @media (max-width: 1150px) {
+        width: 51%;
+      }
+
+      @include medium-1080-break {
+        width: 56%;
+      }
+
+      @include medium-992-break {
+        width: 62%;
+      }
+
+      @media (max-width: 890px) {
+        width: 69%;
+      }
+
+      @media (max-width: 800px) {
+        width: 76%;
+      }
+
+      @include small-768-break {
+        width: 41%;
+        font-size: 14px;
+      }
+
+      @include small-540-break {
+        width: 63%;
+        margin: 0px auto 36px auto;
+      }
+
+      @media (max-width: 430px) {
+        width: 80%;
+      }
+
+      @include small-414-break {
+        width: 78%;
+      }
+
+      @include small-375-break {
+        width: 84%;
+      }
+    }
+  }
+
+  .imagesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0px 11%;
+
+    @include large-1600-break {
+      margin: 0px 12%;
+    }
+
+    @include medium-1080-break {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @include small-768-break {
+      width: 78%;
+      margin: 0px auto;
+    }
+
+    @include small-540-break {
+      width: 83%;
+      justify-content: center;
+      gap: 0px 82px;
+    }
+
+    @include small-414-break {
+      width: 73%;
+    }
+
+    @include small-375-break {
+      width: 79%;
+    }
+
+    & > div:nth-of-type(3) .iconTitle {
+      width: 40%;
+
+      @media (max-width: 430px) {
+        width: 80%;
+      }
+    }
+    & > div:nth-of-type(4) .iconTitle {
+      width: 45%;
+
+      @media (max-width: 1700px) {
+        width: 50%;
+      }
+      @include large-1600-break {
+        width: 57%;
+      }
+      @include large-1536-break {
+        width: 65%;
+      }
+      @include large-1366-break {
+        width: 75%;
+      }
+      @include medium-1080-break {
+        width: 54%;
+      }
+      @include small-540-break {
+        width: 70%;
+      }
+      @media (max-width: 430px) {
+        width: 80%;
+      }
+      @include small-414-break {
+        width: 100%;
+      }
+    }
+    .image {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 20%;
+
+      @include large-1536-break {
+        max-width: 190px;
+      }
+
+      @include large-1440-break {
+        max-width: 180px;
+      }
+
+      @include large-1366-break {
+        max-width: 170px;
+      }
+
+      @include medium-1280-break {
+        max-width: 160px;
+        flex-basis: unset;
+      }
+
+      @include medium-1080-break {
+        max-width: 150px;
+        width: 35%;
+        margin-bottom: 29px;
+      }
+
+      @include small-414-break {
+        max-width: 100px;
+      }
+
+      .iconTitle {
+        width: 74%;
+        font-size: 18px;
+        line-height: 140%;
+        letter-spacing: 0.005em;
+        color: var(--primary-state);
+        text-align: center;
+        margin-top: 24px;
+
+        @include medium-1080-break {
+          font-size: 16px;
+          width: 54%;
+        }
+
+        @include small-540-break {
+          font-size: 14px;
+          width: 70%;
+        }
+
+        @media (max-width: 430px) {
+          width: 80%;
+          margin-top: 16px;
+        }
+
+        @include small-414-break {
+          width: 100%;
+        }
+
+        @include small-360-break {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.mainContainer2 {
+  .imagesContainer,
+  .image {
+    max-width: unset !important;
+  }
+  .iconTitle {
+    width: 90% !important;
+  }
+  .image{
+    flex-basis: unset !important;
+    width: unset !important;
+  }
+}

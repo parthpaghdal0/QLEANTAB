@@ -1,0 +1,73 @@
+@import "../../assets/global-styles/mixins.scss";
+.reviews_section {
+  margin: 194px 0;
+  padding: 0 12vw;
+  .heading {
+    text-align: center;
+    font-size: 28px;
+    line-height: 28px;
+    font-family: "JosefinSans-SemiBold";
+    margin-bottom: 48px;
+    color: var(--primary-state);
+    p {
+      display: inline;
+    }
+    p strong {
+      font-family: "JosefinSans-SemiBold";
+      color: var(--main-green-hover);
+    }
+  }
+  .slider_dots {
+    display: none;
+  }
+  .reviews_product{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+
+    >div{
+      margin-top: 0;
+      align-items: baseline;
+    }
+  }
+  ///// Mobile and Tablet Styles /////
+   @include medium-1080-break {
+    padding: 0 16px;
+   }
+  @include small-540-break {
+    margin: 72px 0;
+    // margin-bottom: 144px;
+    .heading {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 24px;
+      p {
+        display: block;
+      }
+    }
+    .slider_dots {
+      display: flex;
+      margin-top: 48px;
+      justify-content: center;
+    }
+    .prev_dot,
+    .next_dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+      background-color: var(--main-green);
+      margin: 0 5px;
+    }
+    .selected_dot{
+      background-color: var(--primary-duckegg);
+    }
+    .reviews_product{
+      flex-direction: column;
+      align-items: center;
+
+      >div{
+        margin-top: 10px;
+      }
+    }
+  }
+}

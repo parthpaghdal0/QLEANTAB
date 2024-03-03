@@ -1,0 +1,61 @@
+{
+  "name": "gatsby-starter-hello-world",
+  "private": true,
+  "description": "A simplified bare-bones starter for Gatsby",
+  "version": "0.1.0",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "@nrk/core-scroll": "^4.3.0",
+    "@reduxjs/toolkit": "^1.8.3",
+    "axios": "^0.27.2",
+    "country-flag-icons": "^1.5.7",
+    "gatsby": "^4.19.2",
+    "gatsby-plugin-google-gtag": "^4.24.0",
+    "gatsby-plugin-google-tagmanager": "^4.24.0",
+    "gatsby-plugin-image": "^2.20.0",
+    "gatsby-plugin-react-head": "^1.1.0",
+    "gatsby-plugin-react-helmet": "^5.19.0",
+    "gatsby-plugin-sass": "^5.19.0",
+    "gatsby-plugin-sharp": "^4.20.0",
+    "gatsby-source-filesystem": "^4.20.0",
+    "gatsby-source-shopify": "^7.8.0",
+    "gatsby-source-strapi": "^2.0.0",
+    "gatsby-source-yotpo": "^3.0.5",
+    "gatsby-source-yotpo-shopify": "^0.4.2",
+    "gatsby-source-yotpo-webrika": "^0.5.1",
+    "gatsby-transformer-remark": "^5.20.0",
+    "gatsby-transformer-sharp": "^4.20.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-ga4": "^1.4.1",
+    "react-head": "^3.4.2",
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^11.18.6",
+    "react-markdown": "^8.0.3",
+    "react-redux": "^8.0.2",
+    "react-share": "^4.4.1",
+    "react-slick": "^0.29.0",
+    "sass": "^1.54.0",
+    "shopify-buy": "^2.14.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}

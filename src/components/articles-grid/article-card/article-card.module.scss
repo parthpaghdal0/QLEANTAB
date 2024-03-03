@@ -1,0 +1,106 @@
+@import "../../../assets/global-styles/mixins.scss";
+.article_card {
+  border: 1px solid #a0d2be;
+  border-radius: 24px;
+  overflow: hidden;
+  background: white;
+  @include small-768-break {
+    border-radius: 18px;
+  }
+  .card_image {
+    height: 15vw;
+    min-height: 200px;
+    @include small-768-break {
+      height: 30vw;
+      min-height: 130px;
+    }
+  }
+  .article_image {
+    height: 100%;
+  }
+  .card_content {
+    padding: 24px 32px;
+    @include small-768-break {
+      padding: 12px 16px;
+    }
+  }
+  .date {
+    color: #a1a5a9;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: "JosefinSans-Light";
+    margin-bottom: 18px;
+    @include small-768-break {
+      font-size: 12px;
+      line-height: 12px;
+      margin-bottom: 8px;
+    }
+  }
+  .card_content h4 {
+    font-size: 24px;
+    line-height: 34px;
+    font-family: "JosefinSans-Medium";
+    padding-bottom: 12px;
+    @include small-768-break {
+      font-size: 14px;
+      line-height: 20px;
+      padding-bottom: 4px;
+    }
+  }
+  .card_description {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: "JosefinSans-Light";
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 24px;
+    p {
+      display: none;
+    }
+    p:nth-of-type(1) {
+      display: block;
+    }
+    @include small-768-break {
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 6px;
+    }
+  }
+  .card_button {
+    width: 100%;
+    padding: 19px 10px;
+    font-size: 20px;
+    line-height: 20px;
+    background-color: transparent;
+    border: 1px solid #a0d2be;
+    color: #a0d2be;
+    &:hover {
+      background-color: var(--primary-white);
+      box-shadow: 0px 4px 16px rgba(160, 210, 190, 0.47);
+      border: 1px solid var(--main-green-hover);
+      color: var(--main-green-hover);
+    }
+    @include small-768-break {
+      font-size: 14px;
+      line-height: 14px;
+      padding: 16px;
+    }
+  }
+}
+.related_article_card {
+  .card_content {
+    padding: 19px 16px;
+  }
+  .card_content h4 {
+    font-size: 20px;
+    line-height: 29px;
+    font-family: "JosefinSans-Medium";
+    @include small-768-break {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 4px;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "../../../../assets/global-styles/mixins.scss";
+.table_section_tab {
+  margin: 50px 13.5vw 100px 13.5vw;
+  .table_header {
+    border-bottom: 1px solid var(--secondary-blue);
+  }
+  .table_header > div {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: "JosefinSans-Light";
+  }
+  .table_row {
+    padding: 25px 0;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .table_row .column1 {
+    font-family: "JosefinSans-SemiBold";
+  }
+  .table_row .column2 {
+    font-family: "JosefinSans-Light";
+  }
+  .table_row,
+  .table_header {
+    display: flex;
+  }
+  .row_background {
+    background: linear-gradient(
+      270deg,
+      rgba(230, 245, 245, 0.27) 0%,
+      #e6f5f5 51.35%,
+      rgba(230, 245, 245, 0.09) 100%
+    );
+  }
+  .column1 {
+    flex-basis: 25%;
+  }
+  .column2 {
+    flex-basis: 75%;
+  }
+  ///// Mobile and Tablet Styles /////
+  @include small-768-break {
+    margin: 50px 16px;
+    .table_row {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+  @include small-540-break {
+    .table_header > div {
+      font-size: 16px;
+      line-height: 16px;
+    }
+    .table_row {
+      font-size: 14px;
+      line-height: 14px;
+    }
+    .column2 {
+      padding-left: 15px;
+    }
+  }
+}

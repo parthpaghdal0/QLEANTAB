@@ -1,0 +1,17 @@
+@import "../../assets/global-styles/mixins.scss";
+.article_template {
+  position: relative;
+  .article_image2 .main_image {
+    width: 100%;
+    height: 22vw;
+    min-height: 155px;
+  }
+  .article_image .main_image {
+    width: 100%;
+    height: auto;
+    @include small-768-break {
+      width: auto;
+      height: 70vw;
+    }
+  }
+}

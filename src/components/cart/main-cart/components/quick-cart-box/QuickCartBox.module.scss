@@ -1,0 +1,60 @@
+@import "../../../../../assets/global-styles//mixins.scss";
+.quickCartBoxWrapper {
+  width: 100%;
+}
+
+.quickCartBoxHeading {
+  background: var(--primary-duckegg-new);
+  width: 300px;
+  padding: 15px 0;
+  padding-left: 25px;
+  font-family: "JosefinSans-SemiBold";
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--primary-font);
+  @include medium-992-break {
+    width: 100%;
+  }
+  @include small-540-break {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.itemsInShoppingCartWraper {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--primary-duckegg-new);
+  max-width: 300px;
+  font-family: "JosefinSans-Light";
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--primary-font);
+}
+
+.totlaPriceWrapper {
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  .text {
+    font-family: "JosefinSans-SemiBold";
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--primary-font);
+    @include small-540-break {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+  .totalPrice {
+    font-family: "JosefinSans-SemiBold";
+    font-size: 28px;
+    line-height: 28px;
+    color: var(--primary-font);
+    @include small-540-break {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}

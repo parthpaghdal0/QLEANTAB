@@ -1,0 +1,213 @@
+@import "../../../../assets//global-styles//mixins.scss";
+
+.cartInfoWrapper {
+  width: 28%;
+  h2 {
+    padding-bottom: 24px;
+    padding-top: 48px;
+    font-family: "JosefinSans-SemiBold";
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--primary-font);
+    @include small-540-break {
+      font-size: 18px;
+      line-height: 18px;
+      padding-bottom: 16px;
+      padding-top: 32px;
+    }
+  }
+  @include medium-1280-break {
+    width: 600px;
+  }
+
+  @include small-768-break {
+    width: 500px;
+  }
+
+  @include small-540-break {
+    width: 100%;
+  }
+}
+
+.subTotalWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid var(--primary-duckegg);
+  border-radius: 16px;
+  margin-bottom: 8px;
+  .subTotalHeading {
+    font-family: "JosefinSans-SemiBold";
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--primary-font);
+    @include small-540-break {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+
+  .subTotalPrice {
+    font-family: "JosefinSans-SemiBold";
+    font-size: 28px;
+    line-height: 28px;
+    color: var(--primary-font);
+    @include small-540-break {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}
+
+.couponCodeWrapper {
+  padding: 20px;
+  border: 2px solid var(--primary-duckegg);
+  border-radius: 16px;
+  margin-bottom: 8px;
+
+  .couponCodeInnerWrapper {
+    h4 {
+      font-family: "JosefinSans-SemiBold";
+      font-size: 20px;
+      line-height: 20px;
+      color: var(--primary-font);
+      margin-bottom: 16px;
+      @include small-540-break {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+
+    .cuponForm {
+      position: relative;
+      margin-bottom: 12px;
+      .cuponInput {
+        width: 100%;
+        padding-top: 17px;
+        padding-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 120px;
+        border: 1px solid var(--primary-duckegg);
+        border-radius: 100px;
+        font-family: "JosefinSans-Light";
+        font-size: 16px;
+        line-height: 16px;
+        color: var(--primary-font);
+      }
+
+      .invalidCuponInput {
+        border-color: rgb(221, 9, 9);
+        color: maroon;
+      }
+
+      .cuponButton {
+        padding-top: 16px;
+        padding-bottom: 14px;
+        width: 118px;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translate(-100%, -50%);
+        p {
+          font-size: 20px;
+          line-height: 20px;
+          font-family: "JosefinSans-SemiBold";
+          color: white;
+          @include small-540-break {
+            font-size: 16px;
+            line-height: 16px;
+          }
+        }
+        @include small-540-break {
+          padding-top: 17px;
+          padding-bottom: 15px;
+        }
+      }
+    }
+
+    p {
+      font-family: "JosefinSans-Light";
+      font-size: 15px;
+      line-height: 15px;
+      color: var(--primary-font);
+      @include small-540-break {
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+  }
+}
+
+.proccedToCheckoutWrapper {
+  padding: 20px;
+  border: 2px solid var(--primary-duckegg);
+  border-radius: 16px;
+
+  .totalWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    .totalHeading {
+      font-family: "JosefinSans-SemiBold";
+      font-size: 24px;
+      line-height: 24px;
+      color: var(--primary-font);
+      @include small-540-break {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+    .totalPrice {
+      font-family: "JosefinSans-SemiBold";
+      font-size: 28px;
+      line-height: 28px;
+      color: var(--primary-font);
+      @include small-540-break {
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .btnWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    gap: 8px;
+
+    .checkoutBtn {
+      width: 100%;
+      font-family: "JosefinSans-SemiBold";
+      padding-top: 20px;
+      padding-bottom: 17px;
+      font-size: 20px;
+      line-height: 20px;
+      border: 1px solid var(--primary-duckegg);
+      @include small-540-break {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+
+    .continueBtn {
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 17px;
+      font-family: "JosefinSans-SemiBold";
+      font-size: 20px;
+      line-height: 20px;
+      background: white;
+      border: 1px solid var(--primary-duckegg);
+      border-radius: 1000px;
+      color: var(--primary-duckegg);
+      @include small-540-break {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+}

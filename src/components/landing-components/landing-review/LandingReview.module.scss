@@ -1,0 +1,38 @@
+@import "../../../assets/global-styles/mixins.scss";
+
+.wrapper {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--main-green-hover);
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  @include small-768-break {
+    gap: 6px;
+  }
+}
+
+.desktop {
+  @include small-768-break {
+    display: none;
+  }
+}
+
+.mobile {
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+.reviewCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  @include small-768-break {
+    gap: 6px;
+  }
+}

@@ -1,0 +1,369 @@
+@import "../../assets/global-styles/mixins.scss";
+.banner_section {
+  height: 41.7vw;
+  min-height: 41.7vw;
+  display: flex;
+  justify-content: space-between;
+  @include small-540-break {
+    min-height: 90vh;
+    height: fit-content;
+  }
+  @media only screen and (max-width: 390px) {
+    min-height: 95vh;
+  }
+  @media only screen and (max-width: 375px) {
+    min-height: 115vh;
+  }
+  &.descWidth {
+    width: 43%;
+
+    @include large-1440-break {
+      width: 44%;
+    }
+
+    @include medium-1280-break {
+      width: 46%;
+    }
+
+    @include medium-1080-break {
+      width: 55%;
+    }
+
+    @include medium-992-break {
+      width: 58%;
+    }
+
+    @include small-768-break {
+      width: 56%;
+    }
+
+    @include small-540-break {
+      width: 75%;
+    }
+
+    @include small-414-break {
+      width: 87%;
+    }
+  }
+
+  .text_wrapper {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 13.5vw;
+    padding-bottom: 5.8vw;
+    .heading {
+      margin-bottom: 24px;
+      color: var(--primary-state);
+
+      @include large-1536-break {
+        margin-bottom: 19.2px;
+      }
+
+      @include large-1440-break {
+        margin-bottom: 18px;
+      }
+
+      @include large-1366-break {
+        margin-bottom: 17px;
+      }
+    }
+    .heading.titleWidth {
+      @include medium-992-break {
+        width: 57%;
+      }
+
+      @include small-768-break {
+        width: 78%;
+      }
+
+      @include small-540-break {
+        width: 77%;
+      }
+
+      @include small-414-break {
+        width: 72%;
+      }
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 33.6px;
+      font-family: "JosefinSans-Light";
+      display: inline;
+      letter-spacing: 0.005em;
+      color: var(--primary-state);
+
+      @include large-1536-break {
+        font-size: 19.2px;
+        line-height: 26.88px;
+      }
+
+      @include large-1440-break {
+        font-size: 18px;
+        line-height: 25.2px;
+      }
+
+      @include large-1366-break {
+        font-size: 17px;
+        line-height: 24px;
+      }
+    }
+
+    p strong {
+      color: var(--main-green-hover);
+      font-family: "JosefinSans-Thin";
+    }
+    .heading p {
+      font-size: 42px;
+      line-height: 42px;
+      font-family: "JosefinSans-SemiBold";
+      display: inline;
+      margin-bottom: 0;
+      strong {
+        font-family: "JosefinSans-SemiBold";
+        color: var(--main-green-hover);
+      }
+
+      @include large-1536-break {
+        font-size: 33.6px;
+        line-height: 33.6px;
+      }
+
+      @include large-1440-break {
+        font-size: 31.5px;
+        line-height: 31.5px;
+      }
+
+      @include large-1366-break {
+        font-size: 29.88px;
+        line-height: 29.88px;
+      }
+    }
+  }
+  .image_wrapper {
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .banner_btn {
+    font-size: 20px;
+    padding: 20px 57.5px;
+    width: fit-content;
+    margin-top: 48px;
+
+    @include large-1536-break {
+      font-size: 16px;
+      line-height: 16px;
+      padding: 16px 46.3px;
+      margin-top: 38px;
+    }
+
+    @include large-1440-break {
+      font-size: 15px;
+      line-height: 16px;
+      padding: 15px 43.25px;
+      margin-top: 36px;
+    }
+
+    @include large-1366-break {
+      font-size: 14px;
+      line-height: 14px;
+      padding: 14px 41.11px;
+      margin-top: 34.15px;
+    }
+  }
+  &.static_page_styles {
+    height: unset;
+    min-height: unset;
+    display: flex;
+    align-items: center;
+    h1 p {
+      display: inline;
+    }
+    & > div:first-of-type {
+      flex-basis: unset;
+      padding-bottom: unset;
+      justify-content: center;
+      padding-top: 131px;
+      padding-bottom: 97px;
+    }
+    h1 {
+      margin-bottom: 24px;
+      font-size: 36px;
+      line-height: 48px;
+    }
+    & > div:first-of-type p {
+      margin-bottom: 0;
+    }
+    .text_wrapper > p {
+      font-family: "JosefinSans-Regular";
+      letter-spacing: 0.005em;
+      &:last-of-type {
+        line-height: 24px;
+      }
+    }
+    .text_wrapper {
+      flex-basis: 60%;
+    }
+    .image_wrapper {
+      flex-basis: 40%;
+      padding-right: 10vw;
+    }
+    @include medium-992-break {
+      .text_wrapper {
+        flex-basis: 70%;
+      }
+      .image_wrapper {
+        flex-basis: 30%;
+      }
+    }
+    @include small-540-break {
+      &.helper_class {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        h1 p {
+          display: block;
+        }
+        .text_wrapper {
+          display: inline;
+          flex-basis: unset;
+          margin-top: -100px;
+        }
+        .image_wrapper {
+          flex-basis: unset;
+          width: 55%;
+          padding: 0;
+          margin-top: -15vw;
+          margin-right: -15vw;
+        }
+        .image_mobile {
+          flex-basis: unset;
+          display: flex;
+        }
+        & > div:first-of-type {
+          padding: 16px;
+          padding-bottom: 75px;
+        }
+      }
+    }
+    @include small-414-break {
+      &.helper_class {
+        .image_wrapper {
+          width: 75%;
+          margin-top: -23vw;
+          margin-right: -20vw;
+        }
+        .text_wrapper {
+          z-index: 10;
+        }
+      }
+    }
+  }
+  &.banner_discover {
+    @include small-414-break {
+      .text_wrapper {
+        padding-top: 25vw;
+        padding-bottom: 33vw;
+      }
+    }
+  }
+  ///// Mobile and Tablet Styles /////
+  @include medium-1080-break {
+    .text_wrapper .heading p {
+      font-size: 34px;
+      line-height: 48px;
+    }
+    .text_wrapper p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    .banner_btn {
+      font-size: 18px;
+      padding: 15px 38px;
+      margin-top: 30px;
+    }
+  }
+  @include small-768-break {
+    .text_wrapper,
+    .image_wrapper {
+      flex-basis: 50%;
+    }
+    .text_wrapper {
+      padding-left: 10vw;
+      padding-bottom: 5vw;
+    }
+    .text_wrapper .heading {
+      margin-bottom: 12px;
+    }
+    .text_wrapper p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .banner_btn {
+      font-size: 16px;
+      margin-top: 24px;
+    }
+  }
+  @include small-540-break {
+    display: block;
+
+    .text_wrapper,
+    .image_wrapper {
+      padding: 0 4.3vw;
+    }
+    .text_wrapper {
+      padding-top: 30vw;
+      padding-bottom: 20vw;
+    }
+    .text_wrapper .heading p {
+      display: block;
+    }
+    .image_wrapper {
+      flex-basis: 100%;
+      justify-content: center;
+    }
+  }
+  @include small-414-break {
+    .text_wrapper {
+      padding-top: 35vw;
+    }
+    .text_wrapper p {
+      display: inline;
+    }
+  }
+  @media only screen and (max-width: 390px) {
+    .text_wrapper {
+      padding-top: 40vw;
+    }
+    .heading p{
+      font-size: 31px !important;
+      line-height: 42px !important;
+    }
+  }
+  @include small-375-break {
+    .text_wrapper {
+      padding-top: 37vw;
+    }
+  }
+}
+.desktop_section {
+  display: block;
+  @include small-540-break {
+    display: none;
+  }
+}
+.tablet_section {
+  display: none;
+  @include small-768-break {
+    display: block;
+  }
+}
+.mobile_section {
+  display: none;
+  @include small-540-break {
+    display: block;
+  }
+}

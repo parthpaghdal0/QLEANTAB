@@ -1,0 +1,167 @@
+@import "../../assets/global-styles/mixins.scss";
+
+.heading {
+  font-family: "JosefinSans-SemiBold";
+  font-size: 28px;
+  line-height: 28px;
+
+  @include small-768-break {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.heading,
+.subheading {
+  text-align: center;
+
+  @include small-768-break {
+    text-align: left;
+  }
+}
+
+.subheading {
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0.005em;
+  margin: 24px 0 48px;
+
+  @include small-768-break {
+    font-size: 14px;
+    margin: 16px 0 24px;
+  }
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.BoughtTogetherWrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.6%;
+  position: relative;
+  margin-bottom: 10vw;
+
+  @media (max-width: 1820px) {
+    margin-bottom: 0;
+  }
+
+  @include large-1440-break {
+    gap: 0;
+  }
+
+  @include small-768-break {
+    margin: 0 -16px;
+    margin-bottom: 30px;
+  }
+
+  @include small-540-break {
+    margin: 0 -16px;
+    margin-bottom: 24px;
+  }
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 24px;
+  @include large-1440-break {
+    width: 100%;
+    justify-content: center;
+  }
+
+  @include small-540-break {
+    background: var(--primary-duckegg-new);
+    margin: 24px 0;
+    margin-bottom: 0;
+    padding: 16px 16px;
+  }
+}
+
+.totalText {
+  font-family: "JosefinSans-Light";
+  font-size: 18px;
+  line-height: 145%;
+  color: var(--primary-font);
+  margin-bottom: 15px;
+
+  @media (max-width: 1820px) {
+    margin-top: 30px;
+  }
+
+  @include small-540-break {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.totalPriceWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  @include small-540-break {
+    margin-bottom: 16px;
+  }
+}
+
+.totalComparePrice {
+  font-family: "JosefinSans-Light";
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--primary-font);
+  text-decoration: line-through;
+  @include small-540-break {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.totalPrice {
+  font-family: "JosefinSans-SemiBold";
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--primary-font);
+  text-decoration: none;
+  @include small-540-break {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.addBtn {
+  padding-top: 23px;
+  padding-bottom: 17px;
+  width: 230px;
+  font-family: "JosefinSans-SemiBold";
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 15px;
+  @include small-540-break {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 19px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.info {
+  text-align: center;
+  font-family: "JosefinSans-Light";
+  font-size: 16px;
+  line-height: 145%;
+  color: var(--primary-font);
+  .infoSpan {
+    font-weight: 600;
+  }
+  @include small-540-break {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}

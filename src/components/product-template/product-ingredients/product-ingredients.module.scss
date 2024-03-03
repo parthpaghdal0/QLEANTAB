@@ -1,0 +1,74 @@
+@import "../../../assets/global-styles/mixins.scss";
+.product_ingredients {
+  display: flex;
+  .tab1,
+  .tab2 {
+    position: relative;
+    flex-basis: 50%;
+    display: flex;
+    align-items: flex-end;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "JosefinSans-SemiBold";
+  }
+
+  .tabBroder {
+    border: 1px solid var(--primary-font);
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 50px;
+  }
+
+  svg {
+    // margin-right: 15px;
+    margin-right: 5px;
+  }
+  .tab1 svg path:nth-of-type(2),
+  .tab1 svg path:nth-of-type(3),
+  .tab1 svg path:nth-of-type(4),
+  .tab1 svg path:nth-of-type(5) {
+    fill: unset;
+  }
+  .tab2 svg path:nth-of-type(1),
+  .tab2 svg path:nth-of-type(3) {
+    fill: unset;
+  }
+
+  @media (hover: hover) {
+    .tab1:hover {
+      cursor: pointer;
+      svg path:nth-of-type(2),
+      svg path:nth-of-type(3),
+      svg path:nth-of-type(4),
+      svg path:nth-of-type(5) {
+        fill: var(--secondary-peach);
+      }
+    }
+    .tab2:hover {
+      cursor: pointer;
+      svg path:nth-of-type(1),
+      svg path:nth-of-type(3) {
+        fill: var(--primary-duckegg);
+      }
+    }
+  }
+  ///// Mobile and Tablet Styles /////
+  @include medium-992-break {
+    .tab1,
+    .tab2 {
+      font-size: 15px;
+    }
+  }
+  @include small-768-break {
+    flex-direction: column;
+    .tab1,
+    .tab2 {
+      font-size: 18px;
+      line-height: 18px;
+    }
+    .tab1 {
+      margin-bottom: 15px;
+    }
+  }
+}

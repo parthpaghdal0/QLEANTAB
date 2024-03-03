@@ -1,0 +1,54 @@
+@import "../../../assets/global-styles/mixins.scss";
+.modal {
+  position: fixed;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  z-index: 1000002;
+  display: flex;
+}
+
+.message {
+  cursor: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+  text-align: center;
+  text-align: center;
+  min-height: 200px;
+  width: 600px;
+  padding: 20px;
+  background: white;
+  animation: slideDown 0.4s ease-in-out;
+  background: var(--primary-white);
+  border: 1px solid rgba(84, 131, 112, 0.2);
+  box-shadow: 0px 12px 50px rgba(65, 70, 75, 0.15);
+  border-radius: 16px;
+  @include small-768-break {
+    width: 320px;
+  }
+}
+
+.error {
+  background: pink;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  padding: 15px 70px;
+  padding-top: 21px;
+}

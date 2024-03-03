@@ -1,0 +1,99 @@
+@import "../../assets/global-styles/mixins.scss";
+.contact_us_section {
+  margin-bottom: 10.1vw;
+  display: flex;
+  & > div:nth-of-type(1) {
+    background: var(--primary-seafoam);
+    min-height: 600px;
+  }
+  & > div:nth-of-type(2) {
+    background: var(--primary-duckegg);
+    min-height: 600px;
+  }
+  .content_wrapper {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 16px;
+  }
+  .heading {
+    font-size: 42px;
+    line-height: 42px;
+    font-family: "JosefinSans-SemiBold";
+    @include small-540-break {
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+  .address {
+    text-align: center;
+    font-size: 36px;
+    line-height: 45px;
+    font-family: "JosefinSans-Light";
+    @include small-540-break {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+  .address svg,
+  .info_block svg {
+    margin-bottom: 32px;
+    @include small-540-break {
+      margin-bottom: 16px;
+    }
+  }
+  .info_block {
+    text-align: center;
+    margin-bottom: 72px;
+    color: #ffffff;
+    @include small-540-break {
+      margin-bottom: 48px;
+    }
+  }
+  .info_block .heading {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 16px;
+    @include small-540-break {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+  .info_block .description {
+    font-size: 32px;
+    line-height: 32px;
+    font-family: "JosefinSans-SemiBold";
+    @include small-540-break {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+  .info_block.no_margin {
+    margin-bottom: 0;
+  }
+  .social_icon {
+    padding: 0 4px;
+    svg {
+      @include small-540-break {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+  @include small-768-break {
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+}
+
+.IconWrapper {
+  svg {
+    @include small-540-break {
+      width: 46px;
+      height: 46px;
+    }
+  }
+}

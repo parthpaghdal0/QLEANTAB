@@ -1,0 +1,45 @@
+@import "../../assets/global-styles/mixins.scss";
+
+.breadcrumb {
+    font-size: 16px;
+    font-family: "JosefinSans-Light";
+    line-height: 16px;
+    color: var(--primary-state);
+    display: flex;
+    margin: 28px 0 64px;
+}
+
+.share_icon {
+    display: none;
+}
+
+.breadcrumb_divider{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+///// Mobile and Tablet Styles /////
+@include small-768-break {
+    .breadcrumb {
+        font-size: 14px;
+        line-height: 14px;
+        margin: 28px 0;
+    }
+
+    .share_icon {
+        display: block;
+        width: 32px;
+        height: 32px;
+        border: 1px solid var(--primary-duckegg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .breadcrumb_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

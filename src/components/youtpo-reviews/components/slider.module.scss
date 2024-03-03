@@ -1,0 +1,13 @@
+.slider {
+  position: relative;
+  height: 14px;
+  background-color: var(--primary-seafoam);
+  width: 100%;
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background-color: var(--main-green-hover);
+}

@@ -1,0 +1,33 @@
+@import "../../assets/global-styles/mixins.scss";
+.related_articles {
+  background-color: #e7f4ef;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include small-768-break {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+  h3 {
+    margin-bottom: 53px;
+    font-size: 28px;
+    line-height: 28px;
+    @include small-768-break {
+      margin-bottom: 32px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .related_articles_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 24px;
+    @include medium-1080-break {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include small-768-break {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

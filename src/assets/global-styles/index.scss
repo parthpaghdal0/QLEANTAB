@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+:root {
+  font-size: 18px;
+  //font-colors
+  --primary-font: rgba(65, 70, 75, 1);
+  //primary
+  --primary-state: #41464b;
+  --primary-white: #fff;
+  --primary-seafoam: rgba(231, 244, 239, 1);
+  --primary-duckegg: rgba(160, 210, 190, 1);
+  --primary-duckegg-new: #e7f4ef;
+  --main-green: rgba(231, 244, 239, 1);
+  --secondary-green: #3cc74a;
+  --main-green-hover: rgba(110, 191, 155, 1);
+  --dark-green: rgba(84, 131, 112, 1);
+  //backgrounds
+  --header-alt-bg: #e7f4ef;
+  --bg-01: #fffcf7;
+  --bg-02: rgba(254, 247, 247, 1);
+  --bg-03: rgba(248, 251, 252, 1);
+  --bg-04: linear-gradient(180deg, #d1e9f9 0%, #b4ddf6 100%);
+  --bg-05: rgba(249, 252, 251, 1);
+
+  --secondary-pink: #f4b3b3;
+  --secondary-gray: #a1a5a9;
+  --secondary-blue: #b6d9dd;
+  --secondary-nude: #e8d1c2;
+  --secondary-peach: #ffdfaa;
+  --secondary-khaki: #91af97;
+
+  //landing page
+  --header-green: rgba(34, 197, 131, 1);
+  --landing-blue: #3cd3ff;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+a:active,
+a:visited {
+  color: inherit;
+}
+
+// ul {
+//   list-style: none;
+// }
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+@font-face {
+  font-family: "JosefinSans-Bold";
+  src: url("../fonts/JosefinSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "JosefinSans-BoldItalic";
+  src: url("../fonts/JosefinSans-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "JosefinSans-Italic";
+  src: url("../fonts/JosefinSans-Italic.ttf");
+}
+
+@font-face {
+  font-family: "JosefinSans-Light";
+  src: url("../fonts/JosefinSans-Light.ttf");
+}
+
+@font-face {
+  font-family: "JosefinSans-LightItalic";
+  src: url("../fonts/JosefinSans-LightItalic.ttf");
+}
+
+@font-face {
+  font-family: "JosefinSans-Regular";
+  src: url("../fonts/JosefinSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "JosefinSans-Medium";
+  src: url("../fonts/JosefinSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: "JosefinSans-SemiBold";
+  src: url("../fonts/JosefinSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "JosefinSans-SemiBoldItalic";
+  src: url("../fonts/JosefinSans-SemiBoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "JosefinSans-Thin";
+  src: url("../fonts/JosefinSans-Thin.ttf");
+}
+
+@font-face {
+  font-family: "JosefinSans-ThinItalic";
+  src: url("../fonts/JosefinSans-ThinItalic.ttf");
+}
+
+// input::-webkit-outer-spin-button,
+// input::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+
+// input[type="number"] {
+//   -moz-appearance: textfield;
+// }
+
+body {
+  font-family: "JosefinSans-Regular";
+  color: var(--primary-state);
+}

@@ -1,0 +1,35 @@
+@import "../../../assets/global-styles/mixins.scss";
+
+.variants {
+  display: flex;
+  margin-top: 24px;
+}
+
+.variant {
+  display: flex;
+  width: 39px;
+  height: 38px;
+  background-color: var(--primary-white);
+  border: 1px solid var(--primary-duckegg);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-duckegg);
+  margin-right: 8px;
+  font-size: 16px;
+  line-height: 16px;
+
+  &.active {
+    background-color: var(--primary-duckegg);
+    color: var(--primary-white);
+  }
+}
+
+// Mobile resolutions
+@include small-768-break {
+  .variants {
+    order: 2;
+  }
+}

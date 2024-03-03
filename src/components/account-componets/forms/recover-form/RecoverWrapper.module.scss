@@ -1,0 +1,21 @@
+@import "../../../../assets/global-styles/mixins.scss";
+
+.recoverSection {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.desktop {
+  padding: 74px 0;
+  @include small-768-break {
+    display: none;
+  }
+}
+
+.mobile {
+  padding: 100px 16px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

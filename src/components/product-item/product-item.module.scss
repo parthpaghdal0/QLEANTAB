@@ -1,0 +1,121 @@
+@import "../../assets/global-styles/mixins.scss";
+
+.product {
+  width: 25%;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.product_image {
+  width: 15.625vw;
+  height: 15.625vw;
+  object-fit: cover;
+}
+
+.product_heading {
+  font-family: JosefinSans-Medium;
+  font-size: 18px;
+  line-height: 145%;
+  margin: 10px 0 0;
+  min-height: 52px;
+}
+
+.product_price {
+  margin: 25px 0 35px;
+}
+
+.compare_price {
+  font-family: JosefinSans-Light;
+  text-decoration: line-through;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 18px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.price {
+  font-family: JosefinSans-SemiBold;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.product_button {
+  font-family: JosefinSans-SemiBold;
+  width: 100%;
+  padding: 18px 0;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.rating {
+  margin-top: 0;
+}
+
+// Mobile resolutions
+@include large-1440-break {
+  .product_heading {
+    min-height: 53px;
+  }
+}
+
+@include medium-1280-break {
+  .product {
+    width: 33.33%;
+  }
+
+  .product_heading {
+    font-size: 16px;
+    // min-height: initial;
+  }
+
+  .product_image {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .product_price {
+    margin: 10px 0;
+  }
+}
+
+@include small-768-break {
+  .product {
+    width: 50%;
+  }
+
+  .product_image {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+
+@include small-540-break {
+  .price {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .product_heading {
+    min-height: 70px;
+  }
+}
+
+@include small-414-break {
+  .product_heading {
+    min-height: initial;
+  }
+  .product {
+    width: 100%;
+  }
+
+  .product_image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .price {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}

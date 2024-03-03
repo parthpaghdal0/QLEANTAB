@@ -1,0 +1,44 @@
+@import "../../assets/global-styles/mixins.scss";
+.reviews_section {
+  .slick-dots li button:before {
+    font-size: 16px;
+    color: #e7f4ef !important;
+    opacity: 1;
+    padding-top: 64px;
+    @include small-540-break {
+      padding-top: 46px;
+      font-size: 11px;
+    }
+  }
+  .slick-dots li.slick-active button:before {
+    color: var(--main-green-hover) !important;
+  }
+  .slick-next,
+  .slick-prev {
+    width: 35px;
+    height: 35px;
+  }
+  .slick-next {
+    right: -45px;
+  }
+  .slick-prev {
+    left: -45px;
+  }
+  .slick-next:before,
+  .slick-prev:before {
+    display: none;
+  }
+  .slick-prev.slick-arrow.slick-disabled svg path,
+  .slick-next.slick-arrow.slick-disabled svg path {
+    stroke: var(--primary-seafoam) !important;
+  }
+  .slick-prev.slick-arrow.slick-disabled svg rect,
+  .slick-next.slick-arrow.slick-disabled svg rect {
+    stroke: var(--primary-seafoam) !important;
+  }
+  @include small-540-break {
+    .slick-track > div:first-of-type.slick-slide.slick-active {
+      margin-left: -50px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../../assets/global-styles/mixins.scss";
+.custom_button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.3s ease-in-out;
+  &:focus,
+  &:visited,
+  &:active {
+    outline: none;
+  }
+}
+button.global_styles {
+  color: #ffffff;
+  font-family: "JosefinSans-SemiBold";
+  background-color: var(--primary-duckegg);
+  box-shadow: 0px 4px 16px rgba(160, 210, 190, 0.47);
+  border-radius: 1000px;
+
+  @include large-1536-break {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @include large-1440-break {
+    font-size: 15px;
+    line-height: 16px;
+  }
+
+  @include large-1366-break {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  @include small-540-break {
+    background: var(--main-green-hover);
+  }
+}
+
+@media (hover: hover) {
+  .global_styles:hover {
+    background-color: var(--main-green-hover);
+  }
+}

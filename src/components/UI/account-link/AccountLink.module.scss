@@ -1,0 +1,64 @@
+@import "../../../assets/global-styles//mixins.scss";
+
+.linkWrapper {
+  padding: 20px;
+  padding-right: 0;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  transition: 0.2s ease-in-out;
+  @include medium-992-break {
+    padding: 6px;
+    margin-bottom: 8px;
+  }
+  @include small-768-break {
+    min-width: 80px;
+  }
+}
+
+@media (hover: hover) {
+  .linkWrapper:hover {
+    background-color: #d6ece4;
+    .linkText {
+      color: var(--dark-green);
+    }
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  @include medium-992-break {
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+  }
+}
+
+.iconWrapper {
+  position: relative;
+  top: -2px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkText {
+  font-family: "JosefinSans-Bold";
+  font-size: 16px;
+  line-height: 16px;
+  color: rgba(139, 143, 145, 1);
+  @include small-768-break {
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
+
+.active {
+  background: var(--primary-duckegg-new);
+  .linkText {
+    color: var(--dark-green);
+  }
+}

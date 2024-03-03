@@ -1,0 +1,107 @@
+@import "./mixins.scss";
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  // -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+.html-hide-overflow {
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+  // -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+.main-container {
+  margin: 0 auto;
+  padding: 0 13.5vw;
+  // max-width: 3000px;
+  @include large-1440-break {
+    padding: 0 11vw;
+  }
+
+  @include medium-1280-break {
+    padding: 0 7vw;
+  }
+
+  @include medium-1080-break {
+    padding: 0 16px;
+  }
+}
+
+.landing-main-container {
+  margin: 0 auto;
+  padding: 0 13.5vw;
+  // max-width: 3000px;
+  @include large-1440-break {
+    padding: 0 11vw;
+  }
+
+  @include medium-1280-break {
+    padding: 0 7vw;
+  }
+
+  @include medium-1080-break {
+    padding: 0 16px;
+  }
+
+  @include small-768-break {
+    padding: 0 10px;
+  }
+}
+
+#gatsby-focus-wrapper {
+  position: relative;
+}
+
+.product-reviews {
+  // margin: 1rem 7vw 0;
+
+  .instagram svg {
+    width: 1em;
+  }
+}
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// .page-wrapper {
+//   padding: 0 10%;
+//   overflow: hidden;
+// }

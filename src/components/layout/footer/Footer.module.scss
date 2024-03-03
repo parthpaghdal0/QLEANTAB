@@ -1,0 +1,200 @@
+@import "../../../assets/global-styles/mixins.scss";
+
+.altPadding {
+  padding: 0 13.5vw;
+
+  @include large-1600-break {
+    padding: 0 8.5vw;
+  }
+
+  @include large-1440-break {
+    padding: 0 16px;
+  }
+}
+
+.footerContainer {
+  padding-top: 75px;
+  padding-bottom: 45px;
+  background: var(--primary-font);
+  @include small-768-break {
+    padding-top: 36px;
+    padding-bottom: 0;
+  }
+}
+
+.footerHeading {
+  text-align: center;
+  font-size: 28px;
+  line-height: 28px;
+  color: white;
+  font-family: "JosefinSans-SemiBold";
+  margin-bottom: 15px;
+  @include medium-992-break {
+    display: none;
+  }
+}
+
+.footerSubHeading {
+  text-align: center;
+  font-size: 18px;
+  line-height: 18px;
+  color: white;
+  font-family: "JosefinSans-Regular";
+  letter-spacing: 0.005em;
+  margin-bottom: 35px;
+  p {
+    font-weight: 400;
+  }
+  @include medium-992-break {
+    display: none;
+  }
+}
+
+.footerNavWrraperDesktop {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+  @include medium-992-break {
+    display: none;
+  }
+}
+
+.csNavList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+
+  .linkHeadings {
+    font-size: 24px;
+    line-height: 24px;
+    color: white;
+    margin-bottom: 15px;
+    font-family: "JosefinSans-SemiBold";
+
+    @include large-1536-break {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  a {
+    font-size: 20px;
+    line-height: 20px;
+    color: white;
+    font-family: "JosefinSans-Light";
+    color: white;
+    @include large-1536-break {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+  @include small-768-break {
+    display: none;
+  }
+}
+
+.footerInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.infoItem {
+  display: flex;
+  gap: 16px;
+  p {
+    font-size: 18px;
+    line-height: 23px;
+    color: white;
+    font-family: "JosefinSans-Light";
+  }
+  p strong {
+    font-family: "JosefinSans-Medium";
+    font-weight: unset;
+    text-decoration: underline;
+  }
+}
+
+.footerLogosWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include medium-992-break {
+    flex-direction: column-reverse;
+    align-items: center;
+    // gap: 40px;
+  }
+}
+
+.socilaMediaBtnWrapper {
+  display: flex;
+  padding-right: 60px;
+  padding-left: 10px;
+  gap: 10px;
+  button {
+    border: none;
+  }
+  @include medium-992-break {
+    padding: 0;
+  }
+}
+
+.productPaymentIcons {
+  @include medium-992-break {
+    margin: 40px;
+    width: 100%;
+  }
+}
+
+//MOBILE
+
+.footerNavWrraperMobile {
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+.footerInfoWrapperMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 54px;
+
+  .infoItemMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    p {
+      text-align: center;
+      font-size: 16px;
+      line-height: 16px;
+      color: white;
+      font-family: "JosefinSans-Light";
+
+      strong {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.infoTextAlt {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.footerLinksMobileWrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.socilaMediaBtn svg {
+  @include small-540-break {
+    width: 35px;
+    height: 35px;
+  }
+}

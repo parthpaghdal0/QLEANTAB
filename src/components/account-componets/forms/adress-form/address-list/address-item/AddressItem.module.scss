@@ -1,0 +1,95 @@
+@import "../../../../../../assets/global-styles/mixins.scss";
+
+.addressListWrapper {
+  margin-top: 16px;
+}
+
+.listAddressTextWrapper {
+  margin: 0 12px;
+  padding-bottom: 18px;
+  padding-top: 12px;
+  border-bottom: 0.5px solid rgba(65, 70, 75, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include small-768-break {
+    gap: 8px;
+  }
+}
+
+.addressName {
+  font-family: "JosefinSans-Bold";
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--primary-font);
+  margin-bottom: 4px;
+}
+
+.selected {
+  font-family: "JosefinSans-Regular";
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--primary-font);
+}
+
+.addressItemWrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 12px;
+  padding-bottom: 16px;
+}
+
+.borderHelper {
+  width: 100%;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(65, 70, 75, 0.2);
+}
+
+.nameAndAddressWrapper {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nameText,
+.addressText {
+  font-family: "JosefinSans-Bold";
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--primary-font);
+  text-transform: uppercase;
+}
+
+.selectBtn {
+  width: 90px;
+  padding-top: 17px;
+  padding-bottom: 14px;
+  font-family: "JosefinSans-SemiBold";
+  font-size: 16px;
+  background: white;
+  color: var(--primary-duckegg);
+  border: 1px solid var(--primary-duckegg);
+  border-radius: 1000px;
+  @include small-768-break {
+    min-width: 90px;
+  }
+}
+
+.delEditbtnWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 10px;
+}
+
+.defultBackground {
+  background: rgba(231, 244, 239, 0.7);
+  border-radius: 8px;
+}
+
+.hideDefultBtn {
+  opacity: 0;
+  pointer-events: none;
+}

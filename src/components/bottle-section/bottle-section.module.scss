@@ -1,0 +1,323 @@
+@import "../../assets/global-styles/mixins.scss";
+.bottle_section {
+  display: flex;
+  flex-direction: row-reverse;
+  .text_wrapper,
+  .image_wrapper {
+    flex-basis: 50%;
+  }
+  .text_wrapper {
+    padding: 19vw 0;
+    padding-left: 5.2vw;
+    padding-right: 13.5vw;
+  }
+  .image_wrapper {
+    &.desktop_section {
+      display: block;
+    }
+    &.mobile_section {
+      display: none;
+    }
+  }
+  .heading {
+    font-size: 28px;
+    line-height: 28px;
+    font-family: "JosefinSans-SemiBold";
+    margin-bottom: 24px;
+  }
+  .description p {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 16px;
+    letter-spacing: 0.005em;
+  }
+  .block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .block_text {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.71);
+    backdrop-filter: blur(6px);
+    letter-spacing: 0.005em;
+    border: 1px solid #b6d9dd;
+    box-shadow: 13px 9px 20px rgba(182, 217, 221, 0.24);
+    border-radius: 8px;
+    strong {
+      font-family: "JosefinSans-SemiBold";
+    }
+  }
+  .number {
+    width: 31px;
+    height: 31px;
+    min-width: 31px;
+    min-height: 31px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 19px;
+    background-color: #ffffff;
+    letter-spacing: 0.005em;
+    border: 1px solid #b6d9dd;
+    box-shadow: 13px 9px 20px rgba(182, 217, 221, 0.24);
+  }
+  .block_1 {
+    flex-direction: row-reverse;
+    margin-top: 29%;
+    margin-right: 55%;
+  }
+  .block_1 .number {
+    margin-left: 24px;
+  }
+  .block_2 {
+    margin-left: 63%;
+    margin-top: 3%;
+  }
+  .block_2 .number {
+    margin-right: 24px;
+  }
+  .block_3 {
+    flex-direction: row-reverse;
+    margin-top: 5%;
+    margin-right: 58%;
+  }
+  .block_3 .number {
+    margin-left: 24px;
+  }
+  .block_4 {
+    margin-top: 5%;
+    margin-left: 63%;
+  }
+  .block_4 .number {
+    margin-right: 24px;
+  }
+  .block_5 {
+    margin-top: 10%;
+    margin-right: 47.5%;
+    flex-direction: row-reverse;
+  }
+  .block_5 .number {
+    margin-left: 24px;
+  }
+  ///// Mobile and Tablet Styles /////
+  @include large-1600-break {
+    .text_wrapper {
+      padding-top: 15vw;
+      padding-bottom: 15vw;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+  @include large-1536-break {
+    .block_1 {
+      margin-top: 27%;
+      margin-right: 54%;
+    }
+    .block_2 {
+      margin-left: 62%;
+    }
+    .block_3 {
+      margin-right: 57%;
+      margin-top: 3%;
+    }
+    .block_4 {
+      margin-left: 62%;
+      margin-top: 3%;
+    }
+
+    .block_1 .number,
+    .block_3 .number,
+    .block_5 .number {
+      margin-left: 18px;
+    }
+    .block_2 .number,
+    .block_4 .number {
+      margin-right: 18px;
+    }
+  }
+  @include small-768-break {
+    flex-direction: column;
+    .text_wrapper,
+    .image_wrapper {
+      flex-basis: unset;
+    }
+    .image_wrapper {
+      padding: 9.8vw 16px;
+      &.desktop_section {
+        display: none;
+      }
+      &.mobile_section {
+        display: block;
+        position: relative;
+        background-size: contain !important;
+        background-position: unset !important;
+        min-height: 100vw;
+        padding-top: 5vw;
+      }
+    }
+    .text_wrapper {
+      padding: 64px 16px 26px 16px;
+    }
+    .block {
+      align-items: flex-start;
+      background-color: white;
+      border-radius: 7px;
+      padding: 9px 13px 9px 11px;
+      width: fit-content;
+    }
+    .block_1,
+    .block_2,
+    .block_3,
+    .block_4,
+    .block_5 {
+      flex-direction: row;
+      margin: 0;
+      margin-bottom: 5vw;
+      margin-left: 55vw;
+      border: 1px solid #b6d9dd;
+      box-shadow: 13px 9px 20px rgba(182, 217, 221, 0.16);
+      border-radius: 8px;
+      .number {
+        margin: 0;
+        background-color: #cbe4f4;
+      }
+    }
+    .block_text p {
+      display: block;
+    }
+    .block_text {
+      padding: 0;
+      margin-left: 5px;
+      border: unset;
+      box-shadow: unset;
+    }
+    .number_mobile {
+      position: absolute;
+      font-size: 12px;
+      line-height: 16px;
+      min-width: 25px;
+      min-height: 25px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      border: 1px solid var(--secondary-blue);
+      box-shadow: 13px 9px 20px rgba(182, 217, 221, 0.16);
+    }
+    .number_1 {
+      top: 31%;
+      left: 10%;
+    }
+    .number_2 {
+      top: 42%;
+      left: 32%;
+    }
+    .number_3 {
+      top: 53%;
+      left: 9%;
+    }
+    .number_4 {
+      top: 62%;
+      left: 32%;
+    }
+    .number_5 {
+      top: 81%;
+      left: 19%;
+    }
+  }
+  @include small-540-break {
+    .heading {
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 16px;
+    }
+    .description p {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    span {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    .block_1,
+    .block_2,
+    .block_3,
+    .block_4,
+    .block_5 {
+      margin-bottom: 3vw;
+      margin-left: 46vw;
+    }
+    .block_text {
+      font-size: 12px;
+      line-height: 16px;
+      p {
+        display: inline;
+      }
+    }
+  }
+  @include small-414-break {
+    .image_wrapper {
+      padding: 7vw 16px;
+    
+    }
+    .block_1,
+    .block_2,
+    .block_3,
+    .block_4,
+    .block_5 {
+      margin-left: 50vw;
+    }
+    .number_1 {
+      top: 29%;
+      left: 11%;
+    }
+    .number_2 {
+      left: 31%;
+    }
+    .number_3 {
+      top: 53%;
+      left: 8%;
+    }
+    .number_4 {
+      top: 65%;
+      left: 31%;
+    }
+    .number_5 {
+      top: 79%;
+      left: 17%;
+    }
+  }
+  @include small-375-break {
+    .image_wrapper {
+      padding: 0 16px;
+    
+    }
+    .block_1,
+    .block_2,
+    .block_3,
+    .block_4,
+    .block_5 {
+      margin-left: 46vw;
+    }
+    .number_1 {
+      top: 28%;
+      left: 10%;
+    }
+    .number_2 {
+      left: 30%;
+    }
+    .number_4 {
+      left: 30%;
+    }
+    .number_5 {
+      top: 77%;
+    }
+  }
+}

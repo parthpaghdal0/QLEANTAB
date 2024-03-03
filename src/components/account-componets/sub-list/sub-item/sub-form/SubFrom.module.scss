@@ -1,0 +1,125 @@
+@import "../../../../../assets/global-styles/mixins.scss";
+
+.formWrapper {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(65, 70, 75, 0.2);
+  // position: relative;
+}
+
+.textWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  @include small-768-break {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+.delBtn {
+  font-size: 18px;
+  line-height: 18px;
+  color: rgba(180, 180, 180, 1);
+  font-family: "JosefinSans-Regular";
+}
+.popUp {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  display: none;
+  cursor: pointer;
+  @include small-768-break {
+    position: fixed;
+  }
+}
+
+.popUpActive {
+  display: flex;
+}
+
+.form {
+  width: 423px;
+  padding: 32px;
+  background: var(--primary-white);
+  box-shadow: 0px 12px 50px rgba(65, 70, 75, 0.15);
+  border-radius: 16px;
+  animation: slideDown 0.3s ease-in-out;
+  @include small-768-break {
+    width: 90%;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.confirm {
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 0;
+}
+
+.title {
+  font-family: "JosefinSans-Bold";
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.info {
+  p {
+    font-family: "JosefinSans-Regular";
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--primary-font);
+    strong {
+      color: var(--dark-green);
+    }
+  }
+  margin-bottom: 20px;
+}
+
+.buttonsWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.deleteBtn,
+.cancelBtn {
+  color: #ffffff;
+  font-family: "JosefinSans-SemiBold";
+  background-color: var(--primary-duckegg);
+  box-shadow: 0px 4px 16px rgba(160, 210, 190, 0.47);
+  border-radius: 1000px;
+  font-size: 16px;
+  padding: 14px 61px;
+  @include small-768-break {
+    padding: 14px 0;
+    width: 50%;
+  }
+}
+
+.deleteBtn {
+  background: var(--primary-white);
+  color: var(--primary-duckegg);
+  border: 1px solid var(--primary-duckegg);
+}

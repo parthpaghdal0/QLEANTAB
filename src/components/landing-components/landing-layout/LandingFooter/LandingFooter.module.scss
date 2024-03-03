@@ -1,0 +1,18 @@
+@import "../../../../assets/global-styles//mixins.scss";
+
+.footerWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background: var(--primary-white);
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.logo {
+  max-width: 480px;
+
+  @include small-768-break {
+    max-width: 250px;
+  }
+}

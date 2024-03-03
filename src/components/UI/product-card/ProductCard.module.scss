@@ -1,0 +1,263 @@
+@import "../../../assets/global-styles/mixins.scss";
+
+.card_container {
+  margin: 0px 25px;
+  max-width: 312px;
+
+  @include large-1600-break {
+    max-width: 300px;
+  }
+
+  @include large-1536-break {
+    max-width: 250px;
+    margin: 0px 20px;
+  }
+
+  @include large-1440-break {
+    max-width: 234px;
+    margin: 0px 19px;
+  }
+
+  @include large-1366-break {
+    max-width: 222px;
+    margin: 0px 18px;
+  }
+
+  @include medium-1280-break {
+    max-width: 210px;
+    margin: 0px 17px;
+  }
+
+  @include medium-992-break {
+    max-width: 285px;
+    margin: 10px 25px;
+  }
+
+  @include small-768-break {
+    max-width: 210px;
+  }
+
+  @include small-540-break {
+    max-width: 165px;
+    margin: 10px 20px;
+  }
+
+  @include small-414-break {
+    max-width: 160px;
+    margin: 10px 11px;
+  }
+
+  @include small-375-break {
+    max-width: 159px;
+  }
+
+  @include small-360-break {
+    max-width: 155px;
+  }
+
+  .product_image {
+    width: 16.25vw;
+    height: 16.25vw;
+    object-fit: cover;
+
+    @include medium-992-break {
+      width: 28.625vw;
+      height: 28.625vw;
+    }
+
+    @include small-768-break {
+      width: 33.625vw;
+      height: 33.625vw;
+    }
+
+    @include small-414-break {
+      width: 42.4vw;
+      height: 42.4vw;
+    }
+  }
+
+  .stars_container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-top: -50px;
+
+    @include small-768-break {
+      margin-top: -38px;
+    }
+
+    @include small-540-break {
+      margin-top: -23px;
+    }
+
+    @include small-414-break {
+      margin-top: -20px;
+    }
+
+    @include small-375-break {
+      margin-top: -18px;
+    }
+
+    .star_container {
+      margin: 15px 2.5px 10px 2.5px;
+    }
+  }
+
+  .title {
+    font-family: "JosefinSans-Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 145%;
+    margin: 0px 0px 25px 0px;
+    padding: 0px;
+    color: #41464b;
+    min-height: 52px;
+
+    @include large-1536-break {
+      font-size: 14.4px;
+    }
+
+    @include large-1440-break {
+      font-size: 13.5px;
+    }
+
+    @include large-1366-break {
+      font-size: 12.8px;
+    }
+
+    @include small-768-break {
+      font-size: 16px;
+      margin: 0px 0px 20px 0px;
+    }
+
+    @include small-540-break {
+      min-height: 70px;
+    }
+
+    @include small-414-break {
+      font-size: 14px;
+      min-height: 42px;
+    }
+  }
+
+  .price {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    .oldPrice {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 18px;
+      text-decoration-line: line-through;
+      margin: 0px 10px 0px 0px;
+      padding: 0px;
+      color: #a1a5a9;
+
+      @include large-1536-break {
+        font-size: 14.4px;
+        line-height: 14.4px;
+      }
+
+      @include large-1440-break {
+        font-size: 13.5px;
+        line-height: 13.5px;
+      }
+
+      @include large-1366-break {
+        font-size: 12.8px;
+        line-height: 12.8px;
+      }
+
+      @include small-768-break {
+        font-size: 16px;
+      }
+
+      @include small-414-break {
+        font-size: 14px;
+      }
+    }
+
+    .newPrice {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 24px;
+      margin: 0px;
+      padding: 0px;
+
+      @include large-1536-break {
+        font-size: 19.2px;
+        line-height: 19.2px;
+      }
+
+      @include large-1440-break {
+        font-size: 18px;
+        line-height: 18px;
+      }
+
+      @include large-1366-break {
+        font-size: 17px;
+        line-height: 17px;
+      }
+
+      @include small-768-break {
+        font-size: 20px;
+      }
+
+      @include small-540-break {
+        font-size: 19px;
+      }
+    }
+  }
+
+  .button {
+    width: 250px;
+    padding: 11px 10px;
+    margin-top: 35px;
+    box-shadow: 0px 4px 16px rgba(160, 210, 190, 0.47);
+    border-radius: 100px;
+    border-color: rgba(160, 210, 190, 0.01);
+    font-family: "JosefinSans-Regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+
+    @include large-1536-break {
+      width: 218px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    @include large-1440-break {
+      width: 202px;
+      font-size: 15px;
+      line-height: 15px;
+    }
+
+    @include large-1366-break {
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    @include medium-992-break {
+      max-width: 285px;
+    }
+
+    @include small-768-break {
+      width: 100%;
+      margin-top: 25px;
+      font-size: 18px;
+    }
+
+    @include small-540-break {
+      font-size: 16px;
+    }
+  }
+}

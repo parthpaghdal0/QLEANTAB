@@ -1,0 +1,43 @@
+@import "../../assets/global-styles/mixins.scss";
+.text_component {
+  margin-bottom: 108px;
+}
+
+.tos_page_banner {
+  height: 18.9vw;
+  min-height: 18.9vw;
+
+  display: flex;
+  align-items: center;
+  & > div:first-of-type {
+    flex-basis: unset;
+    padding-bottom: unset;
+    justify-content: center;
+  }
+  h1 {
+    margin-bottom: 3vw;
+  }
+}
+.tos_page {
+  .content_wrapper {
+    margin: 70px 0;
+  }
+}
+
+///// Mobile and Tablet Styles /////
+@include medium-1080-break {
+  .tos_page_banner {
+    height: 30vw;
+    min-height: 30vw;
+  }
+}
+@include small-540-break {
+  .tos_page_banner {
+    height: 95vw;
+    min-height: 95vw;
+
+    > div:first-of-type {
+      padding-top: 0;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "../../assets/global-styles/mixins.scss";
+.articles_grid {
+  background-color: #e7f4ef;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include small-768-break {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+  h3 {
+    font-size: 28px;
+    line-height: 28px;
+    font-family: "JosefinSans-SemiBold";
+    margin-bottom: 52px;
+    @include small-768-break {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 32px;
+    }
+  }
+  .grid_component {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 52px;
+    row-gap: 52px;
+    margin-bottom: 52px;
+    @include small-768-break {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 15px;
+      row-gap: 12px;
+      margin-bottom: 32px;
+    }
+  }
+  .grid_button {
+    margin: 0 auto;
+    display: block;
+    min-width: 360px;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    @include small-768-break {
+      min-width: 100%;
+    }
+  }
+}

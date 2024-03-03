@@ -1,0 +1,36 @@
+@import "../../../assets/global-styles/mixins.scss";
+
+.popUp {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.25);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  overflow-y: scroll;
+  cursor: pointer;
+  @include medium-992-break {
+    align-items: flex-start;
+  }
+  @include small-768-break {
+    padding: 0;
+  }
+}
+
+.popUpActive {
+  display: flex;
+}
+
+.popUp::-webkit-scrollbar {
+  display: none;
+}
+
+.popUp {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

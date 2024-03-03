@@ -1,0 +1,47 @@
+@import "../assets/global-styles/mixins.scss";
+.error_page {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include small-768-break {
+    padding: 15px;
+  }
+  .image_wrapper {
+    width: 20vw;
+    margin: 0 auto;
+    @include small-768-break {
+        width: 45vw;
+    }
+  }
+  .image_wrapper img {
+    width: 100%;
+  }
+  h1 {
+    font-size: 80px;
+    line-height: 85px;
+    font-family: "JosefinSans-SemiBold";
+    @include small-768-break {
+        font-size: 65px;
+        line-height: 70px;
+    }
+  }
+  h2 {
+    font-size: 60px;
+    line-height: 65px;
+    font-family: "JosefinSans-SemiBold";
+    @include small-768-break {
+        font-size: 45px;
+        line-height: 50px;
+    }
+  }
+  .home_btn {
+    padding: 30px 50px;
+    font-size: 30px;
+    margin-top: 50px;
+    @include small-768-break {
+       margin-top: 30px;
+    }
+  }
+}

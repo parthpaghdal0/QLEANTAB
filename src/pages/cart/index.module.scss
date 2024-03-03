@@ -1,0 +1,24 @@
+@import "../../assets/global-styles/mixins.scss";
+
+.pageCartWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 13.5vw;
+  padding-bottom: 200px;
+  @include large-1600-break {
+    padding: 0 8.5vw;
+    padding-bottom: 200px;
+  }
+
+  @include large-1440-break {
+    padding: 0 16px;
+    padding-bottom: 200px;
+  }
+
+  @include medium-1280-break {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 200px;
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../assets/global-styles//mixins.scss";
+
+.test {
+  padding-bottom: 187px;
+  @include small-768-break {
+    padding-bottom: 161px;
+  }
+
+  @include small-540-break {
+    padding-bottom: 62px;
+  }
+}

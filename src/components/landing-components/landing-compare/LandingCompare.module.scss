@@ -1,0 +1,34 @@
+@import "../../../assets/global-styles/mixins.scss";
+
+.wrapper {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 48px;
+  padding-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  @include medium-992-break {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  @include small-768-break {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.desktop {
+  @include small-768-break {
+    display: none;
+  }
+}
+
+.mobile {
+  @media (min-width: 769px) {
+    display: none;
+  }
+}

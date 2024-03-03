@@ -1,0 +1,150 @@
+@import "../../../assets//global-styles/mixins.scss";
+
+.cartMainContainerinactive {
+  display: none;
+}
+
+.paddingWrapper {
+  @include small-768-break {
+    padding: 0 16px;
+    width: 100%;
+  }
+}
+
+.cartMainContainer {
+  max-width: 1000px;
+  padding: 35px 32px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background: white;
+  cursor: auto;
+  animation: slide-down 0.3s ease-out forwards;
+  @include medium-992-break {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  @include small-768-break {
+    width: 100%;
+    padding: 35px 16px;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.topCartWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  h4 {
+    font-family: "JosefinSans-SemiBold";
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--primary-font);
+    @include small-768-break {
+      padding-right: 10px;
+    }
+    @include small-540-break {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+}
+
+.closeBtn {
+  @include small-768-break {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transform: translate(-60%, -100%);
+  }
+}
+
+.closeBtnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  p {
+    font-family: "JosefinSans-SemiBold";
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 5px;
+    color: var(--secondary-gray);
+    @include small-768-break {
+      display: none;
+    }
+  }
+}
+
+//middle
+
+.middleCartWrapper {
+  display: flex;
+  gap: 44px;
+
+  @include medium-992-break {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+//bottom
+
+.quickCartBtnWrapper {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--primary-duckegg-new);
+  @include small-768-break {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.continueShopingBtn {
+  font-family: "JosefinSans-SemiBold";
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--primary-duckegg);
+  border: 1px solid var(--primary-duckegg);
+  border-radius: 1000px;
+  width: 300px;
+  padding-top: 23px;
+  padding-bottom: 17px;
+  @include small-540-break {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.proceedBtn {
+  font-family: "JosefinSans-SemiBold";
+  font-size: 20px;
+  line-height: 20px;
+  background: var(--primary-duckegg);
+  color: white;
+  border: 1px solid;
+  border-radius: 1000px;
+  box-shadow: 0px 4px 16px rgba(160, 210, 190, 0.47);
+  width: 300px;
+  padding-top: 23px;
+  padding-bottom: 17px;
+  @include small-540-break {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

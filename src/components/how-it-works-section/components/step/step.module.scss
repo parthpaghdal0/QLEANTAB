@@ -1,0 +1,124 @@
+@import "../../../../assets/global-styles/mixins.scss";
+.step_component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  flex-basis: 33.33%;
+}
+.step_borders {
+  border-width: 0px 2px;
+  border-style: solid;
+  border-color: #e7f4ef;
+}
+.tear {
+  position: relative;
+  span {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    line-height: 32px;
+    font-family: "JosefinSans-SemiBold";
+
+    @include large-1440-break {
+      top: 60%;
+    }
+  }
+
+  svg {
+    filter: drop-shadow(0px 4px 56px rgba(110, 191, 155, 0.44));
+
+    @include large-1440-break {
+      width: 8vw;
+      height: 10vw;
+    }
+  }
+}
+.step_description {
+  text-align: center;
+  padding: 0 16px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "JosefinSans-SemiBold";
+
+  @include large-1536-break {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include large-1440-break {
+    font-size: 15px;
+    line-height: 22.5px;
+  }
+
+  @include large-1366-break {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+@include large-1600-break {
+  .step_description p {
+    display: inline;
+  }
+}
+@include small-540-break {
+  .step_component {
+    flex-basis: unset;
+    flex-direction: row;
+    padding: 0;
+    border: unset;
+    border-bottom: 2px solid #e7f4ef;
+  }
+  .no_border {
+    border-bottom: unset;
+  }
+  .tear {
+    width: 33px;
+    height: 33px;
+    margin: 0;
+    margin-bottom: 16px;
+    span {
+      font-size: 14px;
+      line-height: 14px;
+      top: 100%;
+      left: 65%;
+    }
+  }
+  .step_description {
+    padding: 0;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .step_image {
+    width: 156px;
+  }
+  .step_image,
+  .helper_wrapper {
+    flex-basis: 50%;
+  }
+}
+
+@include small-414-break {
+  .tear {
+    span {
+      top: 80%;
+      left: 50%;
+    }
+  }
+}
+.desktop_section {
+  display: flex;
+  @include small-540-break {
+    display: none;
+  }
+}
+.mobile_section {
+  display: none;
+  @include small-540-break {
+    display: flex;
+  }
+}

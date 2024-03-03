@@ -1,0 +1,94 @@
+@import "../../../../../assets//global-styles//mixins.scss";
+
+.collectionWrapper {
+  padding-top: 36px;
+  padding-bottom: 32px;
+
+  h4 {
+    text-align: center;
+    margin-bottom: 16px;
+    font-family: "JosefinSans-SemiBold";
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--primary-font);
+  }
+}
+
+.itemsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include small-768-break {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+.productImageWrapper {
+  width: 298px;
+  @include medium-992-break {
+    width: 180px;
+  }
+  @include small-768-break {
+    width: 375px;
+  }
+  @include small-540-break {
+    width: 100%;
+  }
+}
+
+.ratingWrapper {
+  margin-bottom: 10px;
+}
+
+.productTitle {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "JosefinSans-SemiBold";
+  color: var(--primary-font);
+  margin-bottom: 24px;
+}
+
+.priceWrapper {
+  width: 200x;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 34px;
+
+  .price {
+    font-size: 24px;
+    line-height: 24px;
+    font-family: "JosefinSans-SemiBold";
+    color: var(--primary-font);
+  }
+
+  .compare {
+    font-size: 18px;
+    line-height: 18px;
+    font-family: "JosefinSans-Light";
+    text-decoration: line-through;
+    color: var(--primary-font);
+  }
+}
+
+.addBtn {
+  width: 100%;
+  padding-top: 23px;
+  padding-bottom: 17px;
+  font-size: 20px;
+  @include small-540-break {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.navigate {
+  cursor: pointer;
+}
+
+.rating {
+  margin: 0;
+}

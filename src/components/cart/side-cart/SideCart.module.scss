@@ -1,0 +1,225 @@
+@import "../../../assets//global-styles/mixins.scss";
+
+.sideCartMainContainerInactive {
+  display: none;
+}
+
+.sideCartMainContainer {
+  // height: 100vh;
+  min-height: 100vh;
+  background: white;
+  cursor: auto;
+  animation: slide-in 0.2s ease-out forwards;
+  padding: 16px;
+  padding-bottom: 24px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    margin-right: -400px;
+  }
+  to {
+    opacity: 1;
+    margin-right: 0;
+  }
+}
+
+.sideCartHeader {
+  padding: 16px;
+  padding-top: 24px;
+  margin: 0 -16px;
+  background: var(--primary-seafoam);
+}
+
+.closeBtnOutsideWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 33px;
+}
+
+.closeBtn {
+  @include small-540-break {
+    position: absolute;
+    left: 100%;
+    top: 10px;
+    transform: translate(-60%, -100%);
+  }
+}
+
+.closeBtnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  p {
+    font-family: "JosefinSans-SemiBold";
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 5px;
+    color: var(--secondary-gray);
+
+    @include small-540-break {
+      display: none;
+    }
+  }
+  //   @include small-768-break {
+  //     padding-left: 40px;
+  //   }
+}
+
+.headerTextWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 150px;
+  .inCart {
+    font-family: "JosefinSans-SemiBold";
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--primary-font);
+    @include small-540-break {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+
+  .items {
+    font-family: "JosefinSans-SemiBold";
+    font-size: 28px;
+    line-height: 28px;
+    color: var(--primary-font);
+    @include small-540-break {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}
+
+.controlsWrappr {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  margin-top: 24px;
+}
+
+.shippingText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  p:nth-child(1) {
+    font-family: "JosefinSans-Regular";
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--primary-font);
+    @include small-540-break {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+  p:nth-child(2) {
+    text-align: right;
+    font-family: "JosefinSans-Light";
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--primary-font);
+    width: 140px;
+    @include small-540-break {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+}
+
+.totalText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  p:nth-child(1) {
+    font-family: "JosefinSans-SemiBold";
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--primary-font);
+    @include small-540-break {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+  p:nth-child(2) {
+    font-family: "JosefinSans-SemiBold";
+    font-size: 28px;
+    line-height: 28px;
+    color: var(--primary-font);
+    @include small-540-break {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}
+
+.footerBtnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  @include small-540-break {
+    flex-direction: column;
+  }
+}
+
+.viewCartBtn {
+  font-family: "JosefinSans-SemiBold";
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--primary-duckegg);
+  border: 1px solid var(--primary-duckegg);
+  border-radius: 1000px;
+  width: 172px;
+  padding-top: 23px;
+  padding-bottom: 17px;
+  @include small-540-break {
+    width: 300px;
+    padding-top: 25px;
+    padding-bottom: 19px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.checkoutBtn {
+  font-family: "JosefinSans-SemiBold";
+  font-size: 20px;
+  line-height: 20px;
+  background: var(--primary-duckegg);
+  color: white;
+  border: 1px solid;
+  border-radius: 1000px;
+  box-shadow: 0px 4px 16px rgba(160, 210, 190, 0.47);
+  width: 172px;
+  padding-top: 23px;
+  padding-bottom: 17px;
+  @include small-540-break {
+    background: var(--main-green-hover);
+    width: 300px;
+    padding-top: 25px;
+    padding-bottom: 19px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (hover: hover) {
+  .checkoutBtn:hover {
+    background-color: var(--main-green-hover);
+  }
+}

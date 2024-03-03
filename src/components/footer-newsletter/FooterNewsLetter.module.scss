@@ -1,0 +1,59 @@
+@import "../../assets//global-styles/mixins.scss";
+.footerNewsLatterForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 100px;
+  @include medium-992-break {
+    display: none;
+  }
+}
+
+.nlFooterInput {
+  width: 455px;
+  padding: 0 30px;
+  height: 50px;
+  border-radius: 1000px;
+  font-size: 18px;
+  line-height: 18px;
+  color: #a1a5a9;
+  font-family: "JosefinSans-Light";
+  border: 1px solid #b6d9dd;
+  @include small-768-break {
+    width: 100%;
+  }
+}
+
+.nlFooterBtn {
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  background: var(--primary-duckegg);
+  color: white;
+  border: none;
+  border-radius: 1000px;
+  padding: 18px 48px 12px 48px;
+  // @include small-540-break {
+  //   padding: 17px 30px 17px 30px;
+  // }
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.errorMessage {
+  position: absolute;
+  color: red;
+  left: 10px;
+  top: 55px;
+}
+
+.successMessage {
+  position: absolute;
+  font-size: 22px;
+  color: var(--main-green-hover);
+  left: 10px;
+  top: -25px;
+}

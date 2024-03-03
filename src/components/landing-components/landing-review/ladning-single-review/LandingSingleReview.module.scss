@@ -1,0 +1,70 @@
+@import "../../../../assets/global-styles/mixins.scss";
+
+.review {
+  width: 100%;
+  border-radius: 6px;
+  background: var(--primary-white);
+  padding: 16px;
+}
+
+.title {
+  font-family: "JosefinSans-Bold";
+  font-size: 22px;
+  line-height: 26px;
+  color: var(--primary-font);
+  margin-bottom: 10px;
+  @include small-768-break {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.imageWrapper {
+  max-width: 340px;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-family: "JosefinSans-Regular";
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  @include small-768-break {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.ratingWrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+  @include small-768-break {
+    gap: 5px;
+  }
+}
+
+.name {
+  font-family: "JosefinSans-Bold";
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--primary-font);
+  margin-bottom: 10px;
+  @include small-768-break {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.desktop {
+  @include small-768-break {
+    display: none;
+  }
+}
+
+.mobile {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

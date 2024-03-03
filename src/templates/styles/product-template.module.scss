@@ -1,0 +1,44 @@
+@import "../../assets/global-styles/mixins.scss";
+
+.product_container {
+  display: flex;
+  color: var(--primary-state);
+  gap: 40px;
+  margin-bottom: 130px;
+
+  @include small-768-break {
+    flex-direction: column;
+    margin-bottom: 85px;
+  }
+
+  @include small-540-break {
+    gap: 0;
+  }
+}
+
+.product_gallery {
+  width: 50%;
+}
+
+.product_information {
+  width: 50%;
+}
+
+@include small-768-break {
+  .product_gallery,
+  .product_information {
+    width: 100%;
+  }
+}
+
+.dropletBg {
+  position: absolute;
+  left: 0;
+  top: 60%;
+  transform: translate(0, -50%);
+  z-index: -10;
+
+  @include medium-1080-break {
+    display: none;
+  }
+}

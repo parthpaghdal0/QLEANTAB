@@ -1,0 +1,76 @@
+@import "../../../../assets/global-styles/mixins.scss";
+
+.moblieUlWrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+
+  .btnHeadingsMobile {
+    font-size: 20px;
+    line-height: 20px;
+    color: white;
+    margin-bottom: 15px;
+    font-family: "JosefinSans-SemiBold";
+    @include small-540-break {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    .btnHeadingsMobileWrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+}
+
+.csNavListMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+
+  a {
+    font-size: 16px;
+    line-height: 16px;
+
+    @include small-540-break {
+      font-size: 14px;
+      line-height: 14px;
+    }
+    color: white;
+    font-family: "JosefinSans-Light";
+  }
+}
+
+.csNavListMobileShow {
+  height: auto;
+  opacity: 1;
+  pointer-events: all;
+  animation: slide-down 0.2s ease-in-out forwards;
+}
+
+@keyframes slide-down {
+  from {
+    margin-top: -50px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+.spinArrow {
+  transition: 0.3s ease-in-out;
+}
+
+.spinArrowActive {
+  transform: rotate(180deg);
+}

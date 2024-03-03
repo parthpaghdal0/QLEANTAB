@@ -1,0 +1,136 @@
+@import "../../../assets//global-styles/mixins.scss";
+
+.wrapper {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 30px;
+  padding-bottom: 190px;
+  @include small-768-break {
+    background-size: unset;
+    background-repeat: unset;
+    background-position: unset;
+    padding-top: 12px;
+    padding-bottom: 35px;
+  }
+}
+
+.desktop {
+  @include small-768-break {
+    display: none;
+  }
+}
+
+.mobile {
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+.logo {
+  max-width: 260px;
+  margin-bottom: 110px;
+
+  @include small-768-break {
+    max-width: 175px;
+    margin-bottom: 22px;
+  }
+}
+
+.mainHeading {
+  font-family: "JosefinSans-Bold";
+  font-size: 64px;
+  line-height: 82px;
+  color: var(--primary-font);
+  margin-bottom: 30px;
+  @include small-768-break {
+    font-size: 31px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+}
+
+.iconTextWrapper {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 32px;
+  @include small-768-break {
+    margin-bottom: 28px;
+    gap: 10px;
+  }
+}
+
+.iconTextWrapper:last-child {
+  margin-bottom: 28px;
+  @include small-768-break {
+    margin-bottom: 16px;
+  }
+}
+
+.icon {
+  max-width: 42px;
+  @include small-768-break {
+    max-width: 16px;
+  }
+}
+
+.text {
+  font-family: "JosefinSans-SemiBold";
+  font-size: 26px;
+  line-height: 26px;
+  max-width: 280px;
+  color: var(--primary-font);
+  @include small-768-break {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.description {
+  font-family: "JosefinSans-Regular";
+  color: var(--primary-font);
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 24px;
+  @include small-768-break {
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 28px;
+  }
+}
+.ctaWrapper {
+  @include small-768-break {
+    text-align: center;
+  }
+}
+
+.cta {
+  font-family: "JosefinSans-Bold";
+  font-size: 22px;
+  line-height: 22px;
+  padding: 23px 80px 17px;
+  box-shadow: 0px 4px 16px rgba(160, 210, 190, 0.47);
+  border-radius: 1000px;
+  background: var(--landing-blue) !important;
+  color: var(--primary-white);
+  transition: 0.3s ease-in-out;
+  @include small-768-break {
+    font-size: 22px;
+    line-height: 22px;
+    padding: 23px 80px 17px;
+  }
+
+  @include small-414-break {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+}
+
+@media (hover: hover) {
+  .cta:hover {
+    opacity: 0.8;
+  }
+}

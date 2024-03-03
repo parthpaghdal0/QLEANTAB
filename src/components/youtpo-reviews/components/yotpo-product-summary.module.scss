@@ -1,0 +1,80 @@
+@import "../../../assets/global-styles/mixins.scss";
+
+.ratings_right_container {
+  width: fit-content;
+  border-radius: 6px;
+  background: white;
+  padding: 6px 10px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  box-shadow: 0px 4px 32px rgb(160 210 190 / 15%);
+}
+
+.ratings_button {
+  text-transform: uppercase;
+  display: flex;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 20px;
+  padding-top: 15px;
+  align-items: center;
+  @include small-768-break {
+    font-size: 16px;
+  }
+}
+
+.rating_small_stars {
+  display: flex;
+  margin-right: 13px;
+  align-items: center;
+
+  svg {
+    max-width: 17px;
+  }
+}
+
+.rating_text {
+  color: var(--blue-002);
+  width: 50px;
+}
+
+.ratingWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.percentage {
+  font-size: 14px;
+  color: var(--primary-font);
+  font-family: "JosefinSans-Bold";
+  text-decoration: underline;
+}
+
+.rating_slider {
+  width: 110px;
+}
+
+.reviewTitleWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reviewsTitle {
+  // width: 100%;
+  font-size: 16px;
+  color: var(----primary-font);
+  font-family: "JosefinSans-Bold";
+  padding-top: 6px;
+}
+
+.progressBarWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
